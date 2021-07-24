@@ -1,0 +1,62 @@
+<div class="wrapper">
+  <form class="card" #searchForm="ngForm" (ngSubmit)="searchUser(searchForm.value)">
+    <h2 class="search-header" fxLayoutAlign="center">
+      Search user by name, email or title of his post:
+    </h2>
+    <div class="search-from">
+      <mat-form-field class="search-input">
+        <input
+          class="search-input"
+          #searchInput
+          ngModel
+          name="searchFor"
+          matInput
+          placeholder="Type here..."
+        />
+      </mat-form-field>
+      <mat-form-field class="search-select">
+        <mat-label>Search by</mat-label>
+        <mat-select
+          #selectInput="ngModel"
+          ngModel
+          required
+          name="searchBy"
+          matInput
+        >
+          <mat-option *ngFor="let option of options" [value]="option.value">
+            {{ option.text }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="selectInput.hasError('required')"
+          >Select searching by is required</mat-error
+        >
+      </mat-form-field>
+      <button class="search-btn" mat-button [disabled]="searchForm.invalid">
+        <mat-icon aria-hidden="false" aria-label="Example home icon"
+          >search</mat-icon
+        >
+      </button>
+    </div>
+  </form>
+</div>
+
+<ng-container *ngIf="!(users$ | async)?.length">
+  <app-loader></app-loader>
+</ng-container>
+
+<div class="wrapper" *ngFor="let user of users$ | async">
+  <div class="card">
+    <div class="card-info">
+      <div class="img-section">
+        <img class="avatar" src="{{ user.avatar }}" />
+      </div>
+      <div class="info-section">
+        <p class="label">Name:</p>
+        <span>{{ user.name }}</span>
+        <p class="label">Email:</p>
+        <span>{{ user.email }}</span>
+      </div>
+      <app-user-posts [posts]="user.posts"></app-user-posts>
+    </div>
+  </div>
+</div>

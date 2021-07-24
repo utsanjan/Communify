@@ -1,0 +1,36 @@
+<div
+  class="container"
+  fxFlex
+  fxLayout="column"
+  fxLayoutGap="20px"
+  fxLayoutAlign="center"
+>
+  <h3 fxLayoutAlign="center">Thank You for Registering</h3>
+
+  <div class="formGroup" *ngIf="currentUser as user" fxLayout="column">
+    <p class="text-center" fxLayoutAlign="center" fxLayoutGap="8px">
+      <span>We have sent a confirmation email to</span>
+      <strong>{{ user.email }}</strong
+      >.
+    </p>
+    <p class="text-center" fxLayoutAlign="center">
+      Please check your email and click on the link to verify your email
+      address.
+    </p>
+  </div>
+
+  <div fxLayoutAlign="center">
+    <button mat-raised-button color="primary" (click)="sendVerificationMail()">
+      Resend Verification Email
+    </button>
+  </div>
+
+  <div fxLayoutAlign="center">
+    <button mat-raised-button color="primary" (click)="navigateMyProfile()">
+      My profile!
+    </button>
+  </div>
+</div>
+
+
+

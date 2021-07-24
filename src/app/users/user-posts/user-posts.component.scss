@@ -1,0 +1,25 @@
+ul {
+    padding: 0;
+    li {
+      list-style: none;
+      margin: 5px 0;
+    }
+    p {
+      margin: 0;
+    }
+    span {
+      font-weight: bold;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+  
+
+  .post-section {
+    font-size: 20px;
+    .label {
+      font-weight: bold;
+    }
+  }

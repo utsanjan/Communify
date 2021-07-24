@@ -1,0 +1,66 @@
+<mat-nav-list>
+  <!-- <div>
+    <a *ngIf="!isAuth" mat-list-item routerLink="/signup">
+      <mat-icon>perm_identity</mat-icon>
+      Sign Up
+    </a>
+    <a *ngIf="!isAuth" mat-list-item routerLink="/login">
+      <mat-icon>account_circle</mat-icon>
+      Log In
+    </a>
+    <a *ngIf="isAuth" mat-list-item routerLink="/user">
+      <mat-icon>question_answer</mat-icon>
+      Events
+    </a>
+    <a *ngIf="isAuth" (click)="logout()" class="logout-link" mat-list-item>
+      <mat-icon>eject</mat-icon>
+      Logout
+    </a>
+  </div> -->
+
+  <div>
+    <a
+      *ngIf="isAuth"
+      mat-list-item
+      [routerLink]="['user', currentUser ? currentUser.id : '']"
+    >
+      <mat-icon>account_circle</mat-icon>
+      My Profile</a
+    >
+
+    <a *ngIf="isAuth" mat-list-item routerLink="/user/list">
+      <mat-icon>group</mat-icon>
+      All users</a
+    >
+
+    <a *ngIf="isAuth" mat-list-item routerLink="/post/list">
+      <mat-icon>group</mat-icon>
+      All posts</a
+    >
+
+    <a *ngIf="isAuth" mat-list-item routerLink="/post/create">
+      <mat-icon>create</mat-icon>
+      Create Post</a
+    >
+
+    <a *ngIf="isAuth" mat-list-item (click)="signOut()">
+      <mat-icon>cancel</mat-icon>Logout</a
+    >
+
+    <a *ngIf="!isAuth" mat-list-item routerLink="/home"
+      ><mat-icon>home</mat-icon>Home</a
+    >
+
+    <!-- <a *ngIf="!isAuth" mat-list-item routerLink="/check-post"
+      ><mat-icon>dvr</mat-icon>Check Posts</a
+    > -->
+
+    <a *ngIf="!isAuth" mat-list-item routerLink="/auth/sign-in">
+      <mat-icon>person_pin</mat-icon>Login</a
+    >
+
+    <a *ngIf="!isAuth" mat-list-item routerLink="/auth/signup">
+      <mat-icon>perm_identity</mat-icon>Register</a
+    >
+  </div>
+</mat-nav-list>

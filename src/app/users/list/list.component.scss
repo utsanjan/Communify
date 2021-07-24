@@ -1,0 +1,79 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+
+.card-info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  max-width: 700px;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 0.5em;
+  box-shadow: 0 0 1em gray;
+  width: 100%;
+  box-sizing: border-box;
+  background: white;
+  opacity: 0.9;
+}
+
+.avatar {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.info-section{
+  font-size: 18px;
+  .label {
+    font-weight: bold;
+  }
+}
+.search-from {
+  display: flex;
+}
+.search-input {
+  width: 600px;
+  margin-right: 20px;
+}
+
+.search-header {
+  font-family: "Pacifico", cursive;
+  font-weight: bold;
+  color: #0A0967;
+}
+
+@media (max-width: 600px) {
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper {
+    margin: 0 20px;
+  }
+  .search-from {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .search-input {
+    width: 250px;
+  }
+
+  .search-select {
+    width: 250px;
+  }
+  .avatar {
+    width: 80px;
+    border-radius: 50%;
+  }
+  .info-section,
+  .post-section {
+    font-size: 16px;
+  }
+}

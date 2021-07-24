@@ -1,0 +1,158 @@
+<div class="wrapper" fxLayout>
+  <div
+    class="sign-up-container"
+    fxFlex
+    fxLayout="column"
+    fxLayoutGap="15px"
+    fxLayoutAlign="center"
+  >
+    <h2 fxLayoutAlign="center">Sign up</h2>
+    <form
+      #registerForm="ngForm"
+      (ngSubmit)="signUp(registerForm.value)"
+      fxLayout="column"
+    >
+      <div class="input-field-container" fxLayout fxLayoutAlign="space-around">
+        <div class="left" fxLayout="column">
+          <mat-form-field>
+            <input
+              #emailInput="ngModel"
+              matInput
+              ngModel
+              id="email"
+              type="email"
+              name="email"
+              required
+              email
+              placeholder="Email address"
+            />
+
+            <mat-error *ngIf="emailInput.hasError('required')"
+              >Email is required.</mat-error
+            >
+            <mat-error *ngIf="emailInput.hasError('email')"
+              >Enter valid email.</mat-error
+            >
+          </mat-form-field>
+          <div
+            #passwordsGroup="ngModelGroup"
+            ngModelGroup="passwordsGroup"
+            appPasswordMatch
+            fxLayout="column"
+          >
+            <mat-form-field>
+              <input
+                #passwordInput="ngModel"
+                matInput
+                ngModel
+                id="password"
+                name="password"
+                type="password"
+                required
+                minlength="6"
+                placeholder="Password"
+              />
+              <mat-error *ngIf="passwordInput.hasError('required')"
+                >Password is required.</mat-error
+              >
+              <mat-error *ngIf="passwordInput.hasError('minlength')"
+                >Password must be at least 6 symbols.</mat-error
+              >
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                #rePasswordInput="ngModel"
+                matInput
+                ngModel
+                id="repassword"
+                name="repassword"
+                type="password"
+                required
+                minlength="6"
+                placeholder="Repeat password"
+              />
+              <mat-error *ngIf="rePasswordInput.hasError('required')"
+                >RePassword is required.</mat-error
+              >
+              <mat-error *ngIf="rePasswordInput.hasError('minlength')"
+                >RePassword must be at least 6 symbols.</mat-error
+              >
+            </mat-form-field>
+
+            <mat-error
+              *ngIf="
+                passwordsGroup.hasError('passwordMatch') &&
+                !passwordInput.invalid &&
+                !rePasswordInput.invalid
+              "
+              >Your password don`t match.</mat-error
+            >
+          </div>
+        </div>
+        <div class="right" fxLayout="column">
+          <mat-form-field>
+            <input
+              #fullNameInput="ngModel"
+              matInput
+              ngModel
+              id="name"
+              name="name"
+              type="text"
+              required
+              placeholder="Your name"
+            />
+            <mat-error *ngIf="fullNameInput.hasError('required')"
+              >Your name is required.</mat-error
+            >
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Select avatar</mat-label>
+            <mat-select #avatarInput="ngModel" name="avatar" ngModel required>
+              <mat-option *ngFor="let avatar of avatars" [value]="avatar.link">
+                <img class="avatar" src="{{ avatar.link }}" />
+                {{ avatar.value }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="avatarInput.hasError('required')"
+              >Choosing avatar is required.</mat-error
+            >
+          </mat-form-field>
+        </div>
+      </div>
+      <button
+        class="btn-sign-up"
+        mat-raised-button
+        color="primary"
+        [disabled]="registerForm.invalid"
+      >
+        Sign Up
+      </button>
+    </form>
+
+    <div class="divider-container" fxFlex fxLayoutAlign="center">
+      <div class="line"><mat-divider></mat-divider></div>
+      <div class="text ">Or</div>
+      <div class="line"><mat-divider></mat-divider></div>
+    </div>
+
+    <button
+      class="btn-sign-up"
+      mat-raised-button
+      color="primary"
+      fxFlex
+      fxLayoutAlign="center"
+      (click)="signUpGoogle()"
+    >
+      Continue with Google
+    </button>
+
+    <div fxFlex fxLayoutAlign="center">
+      <span
+        >Already have an account?
+        <a class="redirect" routerLink="/auth/sign-in">Sign In</a></span
+      >
+    </div>
+  </div>
+</div>

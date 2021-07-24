@@ -1,0 +1,12 @@
+
+<app-loader *ngIf="!(post$ | async)"></app-loader>
+
+<div
+  class="wrapper"
+  fxLayout="column"
+  fxLayoutGap="15px"
+  *ngIf="!!(post$ | async)"
+>
+  <app-card [post]="(post$ | async)"></app-card>
+  <app-comments [post]="(post$ | async)"></app-comments>
+</div>

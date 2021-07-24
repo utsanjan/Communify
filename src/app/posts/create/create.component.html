@@ -1,0 +1,90 @@
+<div
+  class="create-post-section"
+  fxFlex
+  fxLayout="column"
+  fxLayoutGap="15px"
+  fxLayoutAlign="center"
+>
+  <h2 fxLayoutAlign="center">Create post</h2>
+  <form
+    #createFormInput="ngForm"
+    (ngSubmit)="
+      createPost(createFormInput.value.title, createFormInput.value.description)
+    "
+    fxLayout="column"
+  >
+    <mat-form-field>
+      <input
+        matInput
+        ngModel
+        id="title"
+        type="text"
+        name="title"
+        required
+        placeholder="Title"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+        class="textarea"
+        #textareaInput="ngModel"
+        matInput
+        ngModel
+        required
+        minlength="20"
+        maxlength="350"
+        name="description"
+        id="description"
+        cols="30"
+        rows="10"
+        placeholder="Description"
+      ></textarea>
+      <div class="hint" fxLayoutAlign="end">
+        <mat-hint>{{ textareaInput?.value?.length }} / 350</mat-hint>
+      </div>
+      <mat-error *ngIf="textareaInput.hasError('required')"
+        >Please write a post</mat-error
+      >
+      <mat-error *ngIf="textareaInput.hasError('minlength')"
+        >Post must be at least 20 symbols long</mat-error
+      >
+    </mat-form-field>
+
+    <button
+      class="btn-submit"
+      mat-raised-button
+      color="primary"
+      [disabled]="createFormInput.invalid"
+    >
+      Submit
+    </button>
+  </form>
+
+  <div class="upload">
+    <input
+      class="upload-input"
+      id="upload"
+      type="file"
+      color="primary"
+      (change)="detectFiles($event)"
+    />
+    <button
+    class="btn-upload"
+    type="button"
+    mat-mini-fab
+    color="primary"
+    (click)="uploadSingle()"
+  >
+    <mat-icon>file_upload</mat-icon>
+  </button>
+  </div>
+  <div
+    *ngIf="currentUpload?.name"
+    [ngClass]="{ 'upload-msg': currentUpload?.name }"
+  >
+    <p>
+      File {{ currentUpload?.name }} was upload successfully :
+      {{ currentUpload?.progress }}%
+    </p>
+  </div>
+</div>

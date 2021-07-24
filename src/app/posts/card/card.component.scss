@@ -1,0 +1,36 @@
+.wrapper{
+    margin: 0 auto;
+  }
+.avatar {
+  width: 80px;
+  height: 70px;
+  background-size: cover;
+}
+.side-bar {
+  margin-left: 100px;
+  margin-right: 0;
+}
+.main-content {
+  margin-right: 100px;
+}
+
+.redirect {
+  text-decoration: none;
+  color: #202020;
+}
+
+.action-btn button {
+  font-weight: bold;
+}
+
+.card {
+  max-width: 600px;
+  margin: 3% 0;
+  border-radius: 0.5em;
+  box-shadow: 0 0 1em gray;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 25px 16px;
+  background: white;
+  opacity: 0.9;
+}

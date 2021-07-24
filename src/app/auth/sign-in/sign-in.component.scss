@@ -1,0 +1,49 @@
+.divider-container {
+  width: 100%;
+}
+
+.line {
+  flex: 1;
+  color: #131D26;
+}
+
+h2 {
+  color: #131D26;
+  font-size: 40px;
+  font-weight: 900;
+  margin-top:-1px;
+}
+
+input {
+  color: #131D26;
+}
+
+.text {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #131D26;
+}
+.sign-in-section{
+  margin: 3% 35%;
+  border-radius: 20px;
+  padding: 3% 4%;
+  opacity: 70%;
+  background-color: azure;
+}
+
+.btn-sign-in{
+  margin: 0 30%;
+}
+
+.redirect {
+  color: #673ab7;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .sign-in-section {
+    margin: 5%;
+    width: 300px;
+  }
+}

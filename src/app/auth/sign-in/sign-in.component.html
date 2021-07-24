@@ -1,0 +1,92 @@
+<link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+<div class="wrapper" fxLayoutAlign="center center">
+  <div
+    class="sign-in-section"
+    fxFlex
+    fxLayout="column"
+    fxLayoutGap="15px"
+    fxLayoutAlign="center"
+  >
+    <h2 fxLayoutAlign="center">LOGIN</h2>
+    <form
+      class="example-form"
+      #loginForm="ngForm"
+      (ngSubmit)="signIn(loginForm.value)"
+      fxLayout="column"
+    >
+      <mat-form-field>
+        <input matinput
+          #emailInput="ngModel"
+          matInput
+          ngModel
+          id="email"
+          type="email"
+          name="email"
+          required
+          email
+          placeholder="Email address"
+        />
+
+        <mat-error *ngIf="emailInput.hasError('required')"
+          >Email is required.</mat-error
+        >
+        <mat-error *ngIf="emailInput.hasError('email')"
+        >Enter valid email.</mat-error
+      >
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          #passwordInput="ngModel"
+          matInput
+          ngModel
+          id="password"
+          type="password"
+          name="password"
+          required
+          minlength="6"
+          placeholder="Password"
+        />
+        <mat-error *ngIf="passwordInput.hasError('required')"
+          >Password is required.</mat-error
+        >
+        <mat-error *ngIf="passwordInput.hasError('minlength')"
+          >Password must be at least 6 symbols.</mat-error
+        >
+      </mat-form-field><br>
+      <button
+        class="btn-sign-in"
+        mat-raised-button
+        color="primary"
+        [disabled]="loginForm.invalid"
+      >
+        Log In
+      </button>
+    </form>
+
+    <div class="divider-container" fxLayout fxLayoutAlign="center center">
+      <div class="line"><mat-divider></mat-divider></div>
+      <div class="text ">Or</div>
+      <div class="line"><mat-divider></mat-divider></div>
+    </div>
+
+    <div fxFlex fxLayoutAlign="center">
+      <button mat-raised-button color="primary" (click)="signInGoogle()">
+        Sign in with Google
+      </button>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div fxFlex fxLayoutAlign="center">
+      <a class="redirect" routerLink="/auth/forgot-password">Forgot Password?</a>
+    </div>
+
+    <div fxFlex fxLayoutAlign="center">
+      <span
+        >Don't have an account?<br><br>
+        <a class="redirect" fxLayoutAlign="center" routerLink="/auth/signup"
+        style="margin-bottom:10px">Sign Up</a></span
+      >
+    </div>
+  </div>
+</div>

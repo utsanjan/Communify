@@ -1,0 +1,100 @@
+<div class="wrapper">
+  <h2>Comments:</h2>
+
+  <form
+    ngForm
+    class="form-comment"
+    #commentForm="ngForm"
+    (ngSubmit)="addComment(commentForm)"
+    fxLayout="column"
+    fxLayoutAlign="center"
+  >
+    <mat-form-field>
+      <textarea
+        class="textarea-comment"
+        #textareaInput="ngModel"
+        ngModel
+        matInput
+        name="comment"
+        id="comment"
+        rows="5"
+        maxlength="150"
+        required
+        minlength="10"
+        placeholder="Write Comment"
+      ></textarea>
+      <div class="hint" fxLayoutAlign="end">
+        <mat-hint>{{ textareaInput?.value?.length }} / 150</mat-hint>
+      </div>
+      <mat-error *ngIf="textareaInput.hasError('required')"
+        >Please write a comment</mat-error
+      >
+      <mat-error *ngIf="textareaInput.hasError('minlength')"
+        >Comment must be at least 10 symbols long</mat-error
+      >
+
+    </mat-form-field>
+    <button
+      class="btn-sign-up"
+      mat-raised-button
+      color="primary"
+      [disabled]="commentForm.invalid"
+    >
+      Send
+    </button>
+  </form>
+  <div
+    class="comments"
+    fxLayout="column"
+    fxLayoutGap="10px"
+    fxLayoutAlign="center"
+  >
+    <mat-card *ngFor="let comment of allComments$ | async">
+      <div fxLayout>
+        <img
+          src="{{ comment.avatar }}"
+          class="avatar-comments"
+          alt="No Avatar"
+        />
+        <mat-card-header>
+          <mat-card-title>{{ comment.createdBy }}</mat-card-title>
+          <mat-card-subtitle
+            >Created on:
+            {{
+              comment.createdOn | toDate | date: "dd.MM.yyyy hh:mm:SS"
+            }}</mat-card-subtitle
+          >
+        </mat-card-header>
+      </div>
+      <mat-card-content class="content-comments">{{
+        comment.content
+      }}</mat-card-content>
+        <!-- <mat-card-actions class="action-btn" fxLayout fxLayoutAlign="space-between">
+          <div class="like-dislike-btn">
+            <button (click)="likeComment(comment.id)" mat-button>
+              <mat-icon>thumb_up_alt</mat-icon>
+            </button>
+            <span #likes class="likes">
+              {{ comment.likes }}
+            </span>
+      
+            <button (click)="dislikeComment(comment.id)" mat-button>
+              <mat-icon>thumb_down_alt</mat-icon>
+            </button>
+            <span #dislikes class="dislikes">
+              {{ comment.dislikes }}
+            </span>
+          </div>
+      
+          <button
+            *ngIf="author === comment.createdById && isDetailPage"
+            (click)="deleteComment()"
+            mat-button
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+      
+        </mat-card-actions> -->
+    </mat-card>
+  </div>
+</div>

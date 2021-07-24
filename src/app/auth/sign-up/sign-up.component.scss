@@ -1,0 +1,53 @@
+.wrapper {
+  margin: 0 auto;
+}
+.divider-container {
+  width: 100%;
+}
+
+.line {
+  flex: 1;
+}
+
+.text {
+  padding: 0 10px;
+}
+
+.sign-up-container {
+  margin: 3% 20%;
+  border-radius: 0.5em;
+  box-shadow: 0 0 1em gray;
+  padding: 15px 26px;
+  background: white;
+  opacity: 0.9;
+}
+
+.btn-sign-up {
+  margin: 0 20%;
+}
+
+.avatar {
+  width: 30px;
+}
+
+.redirect {
+  color: #673ab7;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .sign-up-container {
+    margin: 5%;
+    width: 300px;
+  }
+  .btn-sign-up {
+    margin: 0;
+  }
+}
+.left {
+  width: 50%;
+}
+.right{
+  width: 40%;
+}

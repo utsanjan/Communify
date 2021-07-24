@@ -1,0 +1,71 @@
+<link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+<mat-toolbar fxLayout class="navbar">
+  <div fxHide.gt-xs>
+    <button mat-icon-button (click)="toggleSidenav()">
+    </button>
+  </div>
+  <div>
+    <a class="title" [routerLink]="isAuth ? ['post', 'list'] : ['home']">COMMUNIFY</a>
+  </div>
+  <ul
+    fxFlex
+    fxLayout
+    fxLayoutGap="35px"
+    fxLayoutAlign="flex-end"
+    fxShow
+    fxHide.lt-sm
+  >
+    <li *ngIf="isAuth">
+      <a [routerLink]="['/user', currentUser ? currentUser.id : '']">
+        My Profile</a
+      >
+    </li>
+
+    <li *ngIf="isAuth">
+      <a routerLink="/user/list">
+        All Users</a
+      >
+    </li>
+
+    <li *ngIf="isAuth">
+      <a routerLink="/post/list">
+        All Posts</a
+      >
+    </li>
+
+    <li *ngIf="isAuth">
+      <a routerLink="/post/create">
+        Create Post</a
+      >
+    </li>
+
+    <li *ngIf="!isAuth">
+      <a routerLink="/home">Home</a>
+    </li>
+
+    <li *ngIf="!isAuth">
+      <a routerLink="/auth/sign-in">Login</a>
+    </li>
+
+    <li *ngIf="!isAuth">
+      <a routerLink="/auth/signup">Register</a
+      >
+    </li>
+  </ul>
+  <div *ngIf="isAuth" fxLayout fxLayoutGap="20px" fxShow fxHide.lt-sm>
+    <div
+      class="welcome-msg"
+      *ngIf="!!currentUser"
+      
+    >
+      <p class="welcome">Hello</p>
+      <img src="{{ currentUser.avatar }}" class="avatar" alt="No Avatar" />
+      <p class="user-name">{{ currentUser.name }}</p>
+    </div>
+    <div fxLayout fxLayoutAlign="center center" fxLayoutGap="10px">
+      <a class="logout" (click)="signOut()"
+        >Logout <span></span></a
+      >
+    </div>
+  </div>
+</mat-toolbar>
