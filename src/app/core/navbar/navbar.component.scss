@@ -36,6 +36,7 @@ mat-toolbar {
   font-family: 'Montserrat' !important;
   background-color: rgba(255, 255, 255, 0) !important;
   border: none !important;
+  list-style-type: none !important;
 }
 
 body {
@@ -44,6 +45,7 @@ body {
 }
 
 a {
+  list-style-type: none;
   text-decoration: none;
   color: #B6B7BD;
 }
@@ -119,8 +121,8 @@ a {
     }
 
     .navbar-toggler {
-      // border-radius: 5px;
-      // background-color: transparent;
+      border-radius: 5px;
+      background-color: transparent;
       cursor: pointer;
       border: none;
       display: none;
@@ -143,6 +145,10 @@ a {
       font-weight: 500;
       color: $text-dark;
     }
+  }
+
+  ul {
+    list-style-type: none !important;
   }
 
   /*
@@ -178,7 +184,9 @@ a {
       }
 
       > li {
+        list-style-type: none !important;
         > a {
+          list-style-type: none !important;
           color: $text-dark;
           text-decoration: none;
           display: inline-block;
@@ -192,6 +200,7 @@ a {
         }
         &.active {
           a {
+            list-style-type: none !important;
             color: $base-color;
           }
         }
@@ -219,6 +228,7 @@ a {
           }
           li {
             a {
+              list-style-type: none !important;
               color: #B6B7BD;
               padding: $navbar-dropdown-item-padding-y
                        $navbar-dropdown-item-padding-x;

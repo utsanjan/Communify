@@ -1,53 +1,82 @@
-.wrapper {
-  margin: 0 auto;
-}
 .divider-container {
   width: 100%;
 }
 
 .line {
   flex: 1;
+  color: #131D26;
+}
+
+.container {
+  vertical-align: middle;
+  width: max-content;
+}
+
+button {
+  width: 100% !important;
+}
+
+h2 {
+  font-family: 'Montserrat' !important;
+  color: #131D26;
+  font-size: 40px;
+  font-weight: 900;
+  margin-top:-1px;
+}
+
+input {
+  font-family: 'Montserrat' !important;
+  color: #131D26;
+}
+
+button {
+  font-family: 'Montserrat' !important;
+  border-radius: 100px !important;
 }
 
 .text {
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #131D26;
 }
 
-.sign-up-container {
-  margin: 3% 20%;
-  border-radius: 0.5em;
-  box-shadow: 0 0 1em gray;
-  padding: 15px 26px;
-  background: white;
-  opacity: 0.9;
+.sign-up-container{
+  margin: 3% 35%;
+  border-radius: 30px;
+  padding: 3% 4%;
+  opacity: 70%;
+  margin-bottom: 150px;
+  background-color: azure;
+  box-shadow: 0 0 1em rgba(128, 128, 128, 0.781);
+  transform: translateX(-6%);
 }
 
-.btn-sign-up {
-  margin: 0 20%;
+mat-form-field {
+  width: max-content;
 }
 
-.avatar {
-  width: 30px;
+input {
+  width: 100% !important;
+}
+
+.btn-sign-in{
+  margin: 0 30%;
 }
 
 .redirect {
-  color: #673ab7;
+  color: #5766bd;
   cursor: pointer;
   font-weight: bold;
 }
 
 @media (max-width: 600px) {
-  .sign-up-container {
+  .sign-in-section {
     margin: 5%;
     width: 300px;
   }
-  .btn-sign-up {
-    margin: 0;
-  }
 }
-.left {
-  width: 50%;
-}
-.right{
-  width: 40%;
+
+span {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }

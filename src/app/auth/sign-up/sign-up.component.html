@@ -6,14 +6,13 @@
     fxLayoutGap="15px"
     fxLayoutAlign="center"
   >
-    <h2 fxLayoutAlign="center">Sign up</h2>
+    <h2 fxLayoutAlign="center">REGISTER</h2>
     <form
       #registerForm="ngForm"
       (ngSubmit)="signUp(registerForm.value)"
-      fxLayout="column"
-    >
-      <div class="input-field-container" fxLayout fxLayoutAlign="space-around">
-        <div class="left" fxLayout="column">
+      fxLayout="center">
+
+      <div class= "container">
           <mat-form-field>
             <input
               #emailInput="ngModel"
@@ -34,12 +33,28 @@
               >Enter valid email.</mat-error
             >
           </mat-form-field>
-          <div
+          <span>‎‎ ‎ ‎‎‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎</span>
+            <mat-form-field>
+              <input
+                #fullNameInput="ngModel"
+                matInput
+                ngModel
+                id="name"
+                name="name"
+                type="text"
+                required
+                placeholder="Your name"
+              />
+              <mat-error *ngIf="fullNameInput.hasError('required')"
+                >Your name is required.</mat-error
+              >
+            </mat-form-field>
+            <span>‎‎ ‎ ‎‎‎‎</span>
+            <h4> </h4>
+            <div
             #passwordsGroup="ngModelGroup"
             ngModelGroup="passwordsGroup"
-            appPasswordMatch
-            fxLayout="column"
-          >
+            appPasswordMatch>
             <mat-form-field>
               <input
                 #passwordInput="ngModel"
@@ -59,7 +74,7 @@
                 >Password must be at least 6 symbols.</mat-error
               >
             </mat-form-field>
-
+          <span>‎‎ ‎ ‎‎‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎</span>
             <mat-form-field>
               <input
                 #rePasswordInput="ngModel"
@@ -79,57 +94,24 @@
                 >RePassword must be at least 6 symbols.</mat-error
               >
             </mat-form-field>
-
+            <span>‎‎ ‎ ‎‎‎‎</span>
+            <h4> </h4>
             <mat-error
               *ngIf="
                 passwordsGroup.hasError('passwordMatch') &&
                 !passwordInput.invalid &&
                 !rePasswordInput.invalid
               "
-              >Your password don`t match.</mat-error
-            >
-          </div>
+              >Your password don`t match.</mat-error><br>      
+          </div><br>
+            <button class="btn-sign-up"
+            mat-raised-button
+            color="primary"
+            [disabled]="registerForm.invalid"
+            >Sign Up
+            </button>
         </div>
-        <div class="right" fxLayout="column">
-          <mat-form-field>
-            <input
-              #fullNameInput="ngModel"
-              matInput
-              ngModel
-              id="name"
-              name="name"
-              type="text"
-              required
-              placeholder="Your name"
-            />
-            <mat-error *ngIf="fullNameInput.hasError('required')"
-              >Your name is required.</mat-error
-            >
-          </mat-form-field>
-
-          <mat-form-field>
-            <mat-label>Select avatar</mat-label>
-            <mat-select #avatarInput="ngModel" name="avatar" ngModel required>
-              <mat-option *ngFor="let avatar of avatars" [value]="avatar.link">
-                <img class="avatar" src="{{ avatar.link }}" />
-                {{ avatar.value }}
-              </mat-option>
-            </mat-select>
-            <mat-error *ngIf="avatarInput.hasError('required')"
-              >Choosing avatar is required.</mat-error
-            >
-          </mat-form-field>
-        </div>
-      </div>
-      <button
-        class="btn-sign-up"
-        mat-raised-button
-        color="primary"
-        [disabled]="registerForm.invalid"
-      >
-        Sign Up
-      </button>
-    </form>
+      </form>
 
     <div class="divider-container" fxFlex fxLayoutAlign="center">
       <div class="line"><mat-divider></mat-divider></div>

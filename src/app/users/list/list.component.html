@@ -1,9 +1,7 @@
 <div class="wrapper">
   <form class="card" #searchForm="ngForm" (ngSubmit)="searchUser(searchForm.value)">
-    <h2 class="search-header" fxLayoutAlign="center">
-      Search user by name, email or title of his post:
-    </h2>
-    <div class="search-from">
+    <h2 class="search-header" fxLayoutAlign="center">SEARCH USERS</h2><br>
+    <div class="search-from" style="padding-left:25px; padding-right: 25px;">
       <mat-form-field class="search-input">
         <input
           class="search-input"
@@ -11,18 +9,17 @@
           ngModel
           name="searchFor"
           matInput
-          placeholder="Type here..."
-        />
+          placeholder="Type here..."/>
       </mat-form-field>
-      <mat-form-field class="search-select">
+      <mat-form-field class="search-select"
+      style="float: right;">
         <mat-label>Search by</mat-label>
         <mat-select
           #selectInput="ngModel"
           ngModel
           required
           name="searchBy"
-          matInput
-        >
+          matInput>
           <mat-option *ngFor="let option of options" [value]="option.value">
             {{ option.text }}
           </mat-option>
@@ -31,10 +28,9 @@
           >Select searching by is required</mat-error
         >
       </mat-form-field>
-      <button class="search-btn" mat-button [disabled]="searchForm.invalid">
+      <button class="search-btn" [ngStyle]="{'color':'white'}" mat-button [disabled]="searchForm.invalid">
         <mat-icon aria-hidden="false" aria-label="Example home icon"
-          >search</mat-icon
-        >
+          >search</mat-icon>
       </button>
     </div>
   </form>
@@ -49,12 +45,10 @@
     <div class="card-info">
       <div class="img-section">
         <img class="avatar" src="{{ user.avatar }}" />
-      </div>
+      </div><br>
       <div class="info-section">
-        <p class="label">Name:</p>
-        <span>{{ user.name }}</span>
-        <p class="label">Email:</p>
-        <span>{{ user.email }}</span>
+        <p class="label">Name: <span>{{ user.name }}</span></p>
+        <p class="label">Email: <span>{{ user.email }}</span></p>
       </div>
       <app-user-posts [posts]="user.posts"></app-user-posts>
     </div>

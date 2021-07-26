@@ -2,7 +2,7 @@ mat-sidenav {
   width: 250px;
 }
 .site {
-  background-color: #0A0D11;
+  background-color: #0D101E;
   width: 100%;
   height: 100%;
   display: flex;
@@ -51,7 +51,6 @@ body::before, body::after {
   mix-blend-mode: screen;
   animation: 44s -27s move infinite ease-in-out alternate;
 }
-
 
 body::before {
   @include dots(40);

@@ -35,7 +35,7 @@
 
     <li *ngIf="isAuth">
       <a routerLink="/post/create">
-        Create Post</a
+        Share Post ‎ </a
       >
     </li>
 
@@ -48,19 +48,14 @@
     </li>
 
     <li *ngIf="!isAuth">
-      <a routerLink="/auth/signup">Register</a
+      <a routerLink="/auth/signup">Register‎ ‎ </a
       >
     </li>
   </ul>
   <div *ngIf="isAuth" fxLayout fxLayoutGap="20px" fxShow fxHide.lt-sm>
     <div
       class="welcome-msg"
-      *ngIf="!!currentUser"
-      
-    >
-      <p class="welcome">Hello</p>
-      <img src="{{ currentUser.avatar }}" class="avatar" alt="No Avatar" />
-      <p class="user-name">{{ currentUser.name }}</p>
+      *ngIf="!!currentUser">
     </div>
     <div fxLayout fxLayoutAlign="center center" fxLayoutGap="10px">
       <a class="logout" (click)="signOut()"

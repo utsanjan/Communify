@@ -1,3 +1,4 @@
+<h1> </h1><br>
 <mat-card class="card wrapper">
   <div fxLayout>
     <img src="{{ post.avatar }}" class="avatar" alt="No Avatar" />
@@ -9,44 +10,44 @@
           post.createdOn | toDate | date: "dd.MM.yyyy hh:mm:SS"
         }}</mat-card-subtitle
       >
-      <mat-card-subtitle
-        >Created by: {{ post.createdByName }}</mat-card-subtitle
-      >
-    </mat-card-header>
+      <mat-card-subtitle>Created by: {{ post.createdByName }}</mat-card-subtitle
+      ></mat-card-header>
   </div>
 
-  <img mat-card-image src="{{ post.imageLink }}" alt="Photo of a Shiba Inu" />
+  <img class="post" mat-card-image src="{{ post.imageLink }}" alt="Photo Post" />
   <mat-card-content>
-    <p>
-      {{ post.description | substring: 200 : !isDetailPage}}
-    </p>
+    <p>{{ post.description | substring: 200 : !isDetailPage}}</p>
   </mat-card-content>
   <mat-card-actions class="action-btn" fxLayout fxLayoutAlign="space-between">
     <div class="like-dislike-btn">
-      <button (click)="likePost(post.id)" mat-button>
+      <button (click)="likePost(post.id)"
+      mat-button style="margin-left: 30px;">
         <mat-icon>thumb_up_alt</mat-icon>
       </button>
-      <span #like class="likes">
+      <span #like class="likes"
+      style="margin-left:-50px;">
         {{ post.likes }}
       </span>
 
-      <button (click)="dislikePost(post.id)" mat-button>
+      <button (click)="dislikePost(post.id)"
+      mat-button style="margin-left:50px">
         <mat-icon>thumb_down_alt</mat-icon>
       </button>
-      <span #dislike class="dislikes">
+      <span #dislike class="dislikes"
+      style="margin-left:-55px;">
         {{ post.dislikes }}
       </span>
     </div>
 
-    <button
+    <button 
       *ngIf="isAuthor && isDetailPage"
       (click)="deletePost()"
-      mat-button
-    >
+      mat-button style="margin-left: 40px">
       <mat-icon>delete</mat-icon>
     </button>
 
-    <button *ngIf="!isDetailPage" (click)="getDetails(post.id)" mat-button>
+    <button *ngIf="!isDetailPage" (click)="getDetails(post.id)"
+    mat-button>
       <mat-icon>more_horiz</mat-icon>
     </button>
   </mat-card-actions>

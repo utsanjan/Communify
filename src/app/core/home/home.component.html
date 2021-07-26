@@ -2,7 +2,7 @@
 <html style="font-size: 16px;">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1024">
     <meta charset="utf-8">
     <meta name="keywords" content="PC gaming news, reviews, and guides">
     <meta name="description" content="">
@@ -133,42 +133,36 @@
             }
         }
     </style>
-
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "",
-            "url": "https://website520584.nicepage.io/About.html",
-            "logo": "//capp.nicepage.com/acd4119266bc153c12a29a6b767f487263de7c56/images/default-logo.png"
-        }
-    </script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="About">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://website520584.nicepage.io/About.html">
-
 </head>
 
 <body class="u-body"> 
+    <div class='loader'>
+    <img id="anim" src="../../../assets/images/load.gif">
+    </div>
     <section class="u-align-center u-clearfix u-image u-shading u-section-2" id="carousel_d0b8" src="" data-image-width="1782" data-image-height="1080">
-      <iframe frameborder="0" height="150%" width="150%"
+      <video  loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true" id="myVideo" height="150%"
       style= "position: fixed; top:0; left: 0; z-index:0; top: 50%;
       left: 50%; transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
       -moz-transform: translate(-50%, -50%);
       -o-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);"
-      src="https://www.youtube.com/embed/videoseries?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&amp;list=PLRmER1m4vpmroxo-hYYRnqIfBx8K3T2Xq">
-      </iframe>
+      -ms-transform: translate(-50%, -50%);
+      min-height: 100%;">
+    <source src="../../../assets/videos/back.mp4" type="video/mp4">
+      </video>
       <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-xl
-      u-valign-middle-xs u-sheet-1" style="z-index: 100 !important">
+      u-valign-middle-xs u-sheet-1" style="z-index: 100 !important; overflow: hidden !important;">
             <h1 class="u-custom-font u-font-montserrat glitch u-text u-text-body-alt-color u-title u-text-1"
             style="margin-top:-100px; margin-bottom:-30px; font-weight: 1000 !important;
             z-index: 100; font-size: 90px" data-text="COMMUNIFY">COMMUNIFY</h1>
             <p class="u-large-text u-text u-text-body-alt-color u-text-font u-text-variant u-text-2">
             <a class="u-active-none u-border-0 u-btn u-button-link u-button-style u-hover-none u-none
-            u-text-body-alt-color u-btn-1" style="margin-top:-60px">The gaming community you will never want to miss</a>
+            u-text-body-alt-color u-btn-1" style="margin-top:-60px;
+            opacity:60%">The gaming community you will never want to miss</a>
             </p>
             <a routerLink="/auth/sign-in" class="u-active-white u-border-2 u-border-white u-btn
             u-button-style u-hover-white u-none u-text-active-black u-text-body-alt-color
@@ -179,6 +173,7 @@
             u-text-hover-black u-btn-6">Get Started</a> 
         </div>
     </section>
+    <div class="dark"></div>
     <div class="overlay"></div>
 </body>
 </html>

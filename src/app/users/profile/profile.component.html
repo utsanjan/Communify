@@ -6,25 +6,22 @@
       <div class="card-info">
         <div class="img-section">
           <img class="avatar" src="{{ user.avatar }}" />
-        </div>
+        </div><br>
         <div class="info-section">
-          <p class="label">Name:</p>
-          <span>{{ user.name }}</span>
-          <p class="label">Email:</p>
-          <span>{{ user.email }}</span>
+          <p class="label">Name: <span>{{ user.name }}</span></p>
+          <p class="label">Email: <span>{{ user.email }}</span></p><br>
           <div class="action">
             <button mat-flat-button color="primary" (click)="resetPassword()">
               Reset password
-            </button>
+            </button><div> </div><br>
             <button
               mat-raised-button
               color="warn"
               (click)="deleteAccount(user.id)"
-            >
-              Delete account
+            >Delete account
             </button>
           </div>
-        </div>
+        </div><br>
         <app-user-posts [posts]="user.posts"></app-user-posts>
       </div>
     </div>

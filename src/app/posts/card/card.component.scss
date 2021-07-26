@@ -1,36 +1,89 @@
-.wrapper{
-    margin: 0 auto;
-  }
-.avatar {
-  width: 80px;
-  height: 70px;
-  background-size: cover;
-}
-.side-bar {
-  margin-left: 100px;
-  margin-right: 0;
-}
-.main-content {
-  margin-right: 100px;
+.divider-container {
+  width: 100%;
 }
 
-.redirect {
-  text-decoration: none;
-  color: #202020;
+.line {
+  flex: 1;
+  color: #131D26;
 }
 
-.action-btn button {
+p {
   font-weight: bold;
+  text-align: center;
+}
+
+.avatar {
+  border-radius: 15px;
+}
+
+mat-icon {
+  color: #1A1C20;
+}
+
+h2 {
+  font-family: 'Montserrat' !important;
+  color: #131D26;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+input {
+  font-family: 'Montserrat' !important;
+  color: #131D26;
+}
+
+button {
+  font-family: 'Montserrat' !important;
+  border-radius: 100px !important;
+  width: 70px !important;
+  height: 70px !important;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  color: azure;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.text {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #131D26;
 }
 
 .card {
-  max-width: 600px;
-  margin: 3% 0;
-  border-radius: 0.5em;
-  box-shadow: 0 0 1em gray;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 25px 16px;
-  background: white;
-  opacity: 0.9;
+  margin: auto;
+  margin-bottom: 30px;
+  border-radius: 30px;
+  padding: 5% 6%;
+  opacity: 70%;
+  background-color: azure;
+  box-shadow: 0 0 1em rgba(128, 128, 128, 0.781);
+}
+
+.post {
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.redirect {
+  color: #5766bd;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .sign-in-section {
+    margin: 5%;
+    width: 300px;
+  }
+}
+
+span {
+  font-family: 'Montserrat' !important;
+  font-weight: bold;
+}
+
+.like-dislike-btn {
+  margin-left: 40px;
+  margin-bottom: 15px;
 }

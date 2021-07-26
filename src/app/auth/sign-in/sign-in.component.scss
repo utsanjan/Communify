@@ -8,6 +8,7 @@
 }
 
 h2 {
+  font-family: 'Montserrat' !important;
   color: #131D26;
   font-size: 40px;
   font-weight: 900;
@@ -15,7 +16,14 @@ h2 {
 }
 
 input {
+  font-family: 'Montserrat' !important;
   color: #131D26;
+}
+
+button {
+  font-family: 'Montserrat' !important;
+  border-radius: 100px !important;
+  width: 100% !important;
 }
 
 .text {
@@ -25,18 +33,16 @@ input {
 }
 .sign-in-section{
   margin: 3% 35%;
-  border-radius: 20px;
+  border-radius: 30px;
   padding: 3% 4%;
   opacity: 70%;
+  margin-bottom: 150px;
   background-color: azure;
-}
-
-.btn-sign-in{
-  margin: 0 30%;
+  box-shadow: 0 0 1em rgba(128, 128, 128, 0.781);
 }
 
 .redirect {
-  color: #673ab7;
+  color: #5766bd;
   cursor: pointer;
   font-weight: bold;
 }
@@ -46,4 +52,9 @@ input {
     margin: 5%;
     width: 300px;
   }
+}
+
+span {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }

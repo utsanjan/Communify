@@ -5,7 +5,7 @@
   fxLayoutGap="15px"
   fxLayoutAlign="center"
 >
-  <h2 fxLayoutAlign="center">Create post</h2>
+  <h2 fxLayoutAlign="center">SHARE POST</h2>
   <form
     #createFormInput="ngForm"
     (ngSubmit)="
@@ -36,7 +36,7 @@
         name="description"
         id="description"
         cols="30"
-        rows="10"
+        rows="5"
         placeholder="Description"
       ></textarea>
       <div class="hint" fxLayoutAlign="end">
@@ -49,14 +49,13 @@
         >Post must be at least 20 symbols long</mat-error
       >
     </mat-form-field>
-
+    <br>
     <button
       class="btn-submit"
       mat-raised-button
       color="primary"
       [disabled]="createFormInput.invalid"
-    >
-      Submit
+    >Submit
     </button>
   </form>
 
@@ -67,15 +66,17 @@
       type="file"
       color="primary"
       (change)="detectFiles($event)"
-    />
+      style="padding-left:20%;
+      padding-right:20%"/>
+
     <button
     class="btn-upload"
     type="button"
     mat-mini-fab
     color="primary"
     (click)="uploadSingle()"
-  >
-    <mat-icon>file_upload</mat-icon>
+    style="margin-top: 20px;"
+  ><mat-icon>file_upload</mat-icon>
   </button>
   </div>
   <div

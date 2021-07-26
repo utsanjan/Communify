@@ -7,7 +7,7 @@
     fxLayoutGap="15px"
     fxLayoutAlign="center"
   >
-    <h2 fxLayoutAlign="center">LOGIN</h2>
+    <h2 fxLayoutAlign="center">LOGIN</h2><br>
     <form
       class="example-form"
       #loginForm="ngForm"
@@ -33,7 +33,7 @@
         <mat-error *ngIf="emailInput.hasError('email')"
         >Enter valid email.</mat-error
       >
-      </mat-form-field>
+      </mat-form-field><br>
       <mat-form-field>
         <input
           #passwordInput="ngModel"
@@ -52,14 +52,13 @@
         <mat-error *ngIf="passwordInput.hasError('minlength')"
           >Password must be at least 6 symbols.</mat-error
         >
-      </mat-form-field><br>
+      </mat-form-field><br><br>
       <button
         class="btn-sign-in"
         mat-raised-button
         color="primary"
         [disabled]="loginForm.invalid"
-      >
-        Log In
+      >Log In
       </button>
     </form>
 
@@ -78,14 +77,16 @@
     <mat-divider></mat-divider>
 
     <div fxFlex fxLayoutAlign="center">
-      <a class="redirect" routerLink="/auth/forgot-password">Forgot Password?</a>
+      <a style="text-decoration:none; font-family: 'Montserrat' !important;"
+      class="redirect" routerLink="/auth/forgot-password">Forgot Password?</a>
     </div>
 
     <div fxFlex fxLayoutAlign="center">
       <span
         >Don't have an account?<br><br>
         <a class="redirect" fxLayoutAlign="center" routerLink="/auth/signup"
-        style="margin-bottom:10px">Sign Up</a></span
+        style="margin-bottom:10px; text-decoration:none; 
+        font-family: 'Montserrat' !important;">Sign Up</a></span
       >
     </div>
   </div>
