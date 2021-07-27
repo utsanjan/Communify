@@ -11,8 +11,8 @@
 
 ## Supported Versions
 
-We release patches for security vulnerabilities. Which versions are eligible
-receiving such patches depend on the CVSS v3.0 Rating:
+We release patches for security vulnerabilities. Which versions are<br>
+eligible receiving such patches depend on the CVSS v3.0 Rating:
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -23,7 +23,7 @@ receiving such patches depend on the CVSS v3.0 Rating:
 
 ## Reporting a Vulnerability
 
-Please report (suspected) security vulnerabilities to
-**[utsanjan@dopesatan.ml](mailto:utsanjan@dopesatan.ml)**.
-If the issue is confirmed, we will release a patch as soon
+Please report (suspected) security vulnerabilities to <br>
+**[utsanjan@dopesatan.ml](mailto:utsanjan@dopesatan.ml)**. <br>
+If the issue is confirmed, we will release a patch as soon <br>
 as possible depending on complexity within a few days.
