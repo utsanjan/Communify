@@ -10,6 +10,7 @@ a {
   text-decoration:none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bolder;
+  font-size: large;
 }
 
 body{
@@ -20,10 +21,10 @@ body{
 
 .float{
 	position:fixed;
-	width:150px;
+	width:120px;
 	height:60px;
-	bottom:40px;
-	right:40px;
+	bottom:50px;
+	right:50px;
 	background-color:#0C9;
 	color:#FFF;
 	border-radius:50px;
