@@ -5,6 +5,13 @@
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
 }
+
+a {
+  text-decoration:none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+}
+
 body{
   min-height: 100vh;
   width: 100%;
@@ -13,13 +20,14 @@ body{
 
 .float{
 	position:fixed;
-	width:60px;
+	width:150px;
 	height:60px;
 	bottom:40px;
 	right:40px;
 	background-color:#0C9;
 	color:#FFF;
 	border-radius:50px;
+  z-index: 99999;
 	text-align:center;
 	box-shadow: 2px 2px 3px #999;
 }
