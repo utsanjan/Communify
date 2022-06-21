@@ -18,4 +18,9 @@ Click on the above Communify logo to open the live application on this browser w
 -	This application can be accessed from any type of platform.
 -	24 X 7 application server runtime availability. 
 
-### 📑 Bachelor's Project Thesis PDF: [DOWNLOAD](https://bit.ly/3b42zPK)
+#### [📑 Bachelor's Project Thesis PDF Download](https://bit.ly/3b42zPK)
+
+# 🧑🏻‍🏫 Project Group Members
+- [Partha Sarathi Bhunia](https://github.com/parthasarathi04)
+- [Utsanjan Maity](https://github.com/utsanjan)
+- [Abhik Khatuya](https://github.com/ABHIK-KHATUYA)
