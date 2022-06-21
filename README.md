@@ -5,14 +5,17 @@ Click on the above Communify logo to open the live application on this browser w
 <br>
 
 # 👾 Specifications and Features
-
-- Secure access of confidential data by user name and password.
--	24 X 7 application server availability.
--	Better component design to get better performance at peak time.
--	The database used here is robust, reliable and, fast so that users don't need to wait much. 
--	This application can be accessed from any type of platform.
--	There is no case of redundancy in the database so it will not take extra memory space.
+[![Buy Me A Coffee](https://img.shields.io/open-vsx/stars/redhat/java?color=D8B024&label=buy%20me%20a%20coffee&style=plastic)](https://www.buymeacoffee.com/utsanjan)‎ ‎
+[![](https://img.shields.io/github/license/utsanjan/Communify?logoColor=red&style=plastic)](https://github.com/utsanjan/Communify/blob/main/LICENSE)‎ ‎
+[![](https://img.shields.io/github/languages/count/utsanjan/Communify?style=plastic)](https://github.com/utsanjan/Communify/search?l=shell)‎ ‎
+[![](https://img.shields.io/github/languages/top/utsanjan/Communify?color=light%20green&style=plastic)](https://github.com/utsanjan/Communify)‎ ‎ <br>
+-	The database used here is robust, reliable and, fast so that users don't need to wait much.
 -	User verification email gets sent to the user's provided email address after registration.
+-	There is no case of redundancy in the database so it will not take extra memory space.
 -	Password recovery system is also provided in case the user forgets the password.
+-	Better component design to get better performance at peak time.
+- Secure access of confidential data by user name and password.
+-	This application can be accessed from any type of platform.
+-	24 X 7 application server availability. 
 
 ### 📑 Bachelor's Project Thesis PDF: [DOWNLOAD](https://bit.ly/3b42zPK)
