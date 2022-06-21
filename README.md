@@ -16,6 +16,6 @@ Click on the above Communify logo to open the live application on this browser w
 -	Better component design to get better performance at peak time.
 - Secure access of confidential data by user name and password.
 -	This application can be accessed from any type of platform.
--	24 X 7 application server availability. 
+-	24 X 7 application server runtime availability. 
 
 ### 📑 Bachelor's Project Thesis PDF: [DOWNLOAD](https://bit.ly/3b42zPK)
