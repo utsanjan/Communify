@@ -9,7 +9,7 @@ Click on the above Communify logo to open the live application on this browser w
 [![](https://img.shields.io/github/license/utsanjan/Communify?logoColor=red&style=plastic)](https://github.com/utsanjan/Communify/blob/main/LICENSE)‎ ‎
 [![](https://img.shields.io/github/languages/count/utsanjan/Communify?style=plastic)](https://github.com/utsanjan/Communify/search?l=shell)‎ ‎
 [![](https://img.shields.io/github/languages/top/utsanjan/Communify?color=light%20green&style=plastic)](https://github.com/utsanjan/Communify)‎ ‎ <br>
--	The database used here is robust, reliable and, fast so that users don't need to wait much.
+-	The database used here is robust, reliable, and fast so that users don't need to wait much.
 -	User verification email gets sent to the user's provided email address after registration.
 -	There is no case of redundancy in the database so it will not take extra memory space.
 -	Password recovery system is also provided in case the user forgets the password.
