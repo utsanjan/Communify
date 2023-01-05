@@ -4,7 +4,7 @@ Click on the above Communify logo to open the live application on this browser w
 
 <br>
 
-# 👾 Specifications and Features
+# 👾 Feature Specifications
 [![Buy Me A Coffee](https://img.shields.io/open-vsx/stars/redhat/java?color=D8B024&label=buy%20me%20a%20coffee&style=plastic)](https://www.buymeacoffee.com/utsanjan)‎ ‎
 [![](https://img.shields.io/github/license/utsanjan/Communify?logoColor=red&style=plastic)](https://github.com/utsanjan/Communify/blob/main/LICENSE)‎ ‎
 [![](https://img.shields.io/github/languages/count/utsanjan/Communify?style=plastic)](https://github.com/utsanjan/Communify/search?l=shell)‎ ‎
