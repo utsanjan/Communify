@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "comm-unify",
     "public": "public",
     "ignore": [
       "firebase.json",
