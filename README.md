@@ -1,11 +1,11 @@
-<h1 align="center"><a href="https://web-communify.netlify.app/" target="_blank"><img src="https://camo.githubusercontent.com/71e8189c610362729c8056eea4796ec8e5a27e11cfdd645db39578a5967a52bf/68747470733a2f2f626c6f676765722e676f6f676c6575736572636f6e74656e742e636f6d2f696d672f612f415676587345683645556e54503274416247354b4f4d4d5a4732516143724e58477757566f5039794a443749466f70436b7a466c437777506a61547864626c715563686472376f367579364e416b646e4b3362765f72524a5647304e4974774c7947616b7a5154416847763864746630496f426e4150306364627778566663666c6951364a44613772724648472d324155387a4f6f554d54463971684c32507242753242497a7865616d544b7138576939685938495955623641334b39586e4f3d733136303030"></a></h1>
+<h1 align="center"><a href="https://comm-unify.netlify.app/" target="_blank"><img src="https://camo.githubusercontent.com/71e8189c610362729c8056eea4796ec8e5a27e11cfdd645db39578a5967a52bf/68747470733a2f2f626c6f676765722e676f6f676c6575736572636f6e74656e742e636f6d2f696d672f612f415676587345683645556e54503274416247354b4f4d4d5a4732516143724e58477757566f5039794a443749466f70436b7a466c437777506a61547864626c715563686472376f367579364e416b646e4b3362765f72524a5647304e4974774c7947616b7a5154416847763864746630496f426e4150306364627778566663666c6951364a44613772724648472d324155387a4f6f554d54463971684c32507242753242497a7865616d544b7138576939685938495955623641334b39586e4f3d733136303030"></a></h1>
 <p align="center">A simple Gaming Social Media Website built by using Angular-CLI for sharing gaming stats.<br>
 Click on the above Communify logo to open the live application on this browser window.</p>
 
 <br>
 
 # 👾 Feature Specifications
-[![Netlify Status](https://api.netlify.com/api/v1/badges/cc483896-4a32-49ca-90a0-ba1bf4ae4540/deploy-status)](https://app.netlify.com/sites/web-communify/deploys)‎ ‎
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cc483896-4a32-49ca-90a0-ba1bf4ae4540/deploy-status)](https://app.netlify.com/sites/comm-unify/deploys)‎ ‎
 [![Buy Me A Coffee](https://img.shields.io/open-vsx/stars/redhat/java?color=D8B024&label=buy%20me%20a%20coffee&style=flat)](https://www.buymeacoffee.com/utsanjan)‎ ‎
 [![](https://img.shields.io/github/license/utsanjan/Communify?logoColor=red&style=flat)](https://github.com/utsanjan/Communify/blob/main/LICENSE)‎ ‎
 [![](https://img.shields.io/github/languages/count/utsanjan/Communify?style=flat)](https://github.com/utsanjan/Communify/search?l=shell)‎ ‎
