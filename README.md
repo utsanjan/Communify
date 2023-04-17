@@ -7,6 +7,7 @@ Click on the above Communify logo to open the live application on this browser w
 # 👾 Feature Specifications
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cc483896-4a32-49ca-90a0-ba1bf4ae4540/deploy-status)](https://app.netlify.com/sites/comm-unify/deploys)‎ ‎
 [![Buy Me A Coffee](https://img.shields.io/open-vsx/stars/redhat/java?color=D8B024&label=buy%20me%20a%20coffee&style=flat)](https://www.buymeacoffee.com/utsanjan)‎ ‎
+[![](https://dcbadge.vercel.app/api/server/uavTPkr?style=plastic)](https://discord.gg/bvzTHWnD3n)‎ ‎
 [![](https://img.shields.io/github/license/utsanjan/Communify?logoColor=red&style=flat)](https://github.com/utsanjan/Communify/blob/main/LICENSE)‎ ‎
 [![](https://img.shields.io/github/languages/count/utsanjan/Communify?style=flat)](https://github.com/utsanjan/Communify/search?l=shell)‎ ‎
 [![](https://img.shields.io/github/languages/top/utsanjan/Communify?color=light%20green&style=flat)](https://github.com/utsanjan/Communify)‎ ‎ <br>
