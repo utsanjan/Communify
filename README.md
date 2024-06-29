@@ -2,6 +2,8 @@
 <p align="center">A simple Gaming Social Media Website built by using Angular-CLI for sharing gaming stats.<br>
 Click on the above Communify logo to open the live application on this browser window.</p>
 
+<a href="https://communify.dopesatan.in/"><img src="https://tinyurl.com/nyt3nh4e"></a>
+
 <br>
 
 # 👾 Feature Specifications
