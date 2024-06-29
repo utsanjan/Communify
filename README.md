@@ -2,8 +2,6 @@
 <p align="center">A simple Gaming Social Media Website built by using Angular-CLI for sharing gaming stats.<br>
 Click on the above Communify logo to open the live application on this browser window.</p>
 
-<a href="https://communify.dopesatan.in/"><img src="https://tinyurl.com/nyt3nh4e"></a>
-
 <br>
 
 # 👾 Feature Specifications
@@ -13,6 +11,9 @@ Click on the above Communify logo to open the live application on this browser w
 [![](https://img.shields.io/github/license/utsanjan/Communify?logoColor=red&style=flat)](https://github.com/utsanjan/Communify/blob/main/LICENSE)‎ ‎
 [![](https://img.shields.io/github/languages/count/utsanjan/Communify?style=flat)](https://github.com/utsanjan/Communify/search?l=shell)‎ ‎
 [![](https://img.shields.io/github/languages/top/utsanjan/Communify?color=light%20green&style=flat)](https://github.com/utsanjan/Communify)‎ ‎ <br>
+
+<a href="https://communify.dopesatan.in/"><img src="https://tinyurl.com/nyt3nh4e"></a>
+
 -	The database used here is robust, reliable, and fast so that users don't need to wait much.
 -	User verification email gets sent to the user's provided email address after registration.
 -	There is no case of redundancy in the database so it will not take extra memory space.
