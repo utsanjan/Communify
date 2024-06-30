@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://comm-unify.netlify.app/" target="_blank"><img src="https://raw.githubusercontent.com/utsanjan/Communify/master/src/assets/images/logo.png" width="80%"></a></h1>
+<h1 align="center"><a href="https://communify.dopesatan.in/" target="_blank"><img src="https://raw.githubusercontent.com/utsanjan/Communify/master/src/assets/images/logo.png" width="80%"></a></h1>
 <p align="center">A simple Gaming Social Media Website built by using Angular-CLI for sharing gaming stats.<br>
 Click on the above Communify logo to open the live application on this browser window.</p>
 
