@@ -1,7 +1,7 @@
 <h1> </h1><br>
 <mat-card class="card wrapper">
   <div fxLayout>
-    <img src="{{ post.avatar }}" class="avatar" alt="No Avatar" />
+    <img src="{{ post.avatar }}" class="avatar" alt="No Avatar" onerror="this.src='../../../../angularapp/assets/images/def.jpg';"/>
     <mat-card-header>
       <mat-card-title>{{ post.title }}</mat-card-title>
       <mat-card-subtitle
@@ -14,7 +14,7 @@
       ></mat-card-header>
   </div>
 
-  <img class="post" mat-card-image src="{{ post.imageLink }}" alt="Photo Post" />
+  <img class="post" mat-card-image src="{{ post.imageLink }}" alt="Photo Post"/>
   <mat-card-content>
     <p>{{ post.description | substring: 200 : !isDetailPage}}</p>
   </mat-card-content>
