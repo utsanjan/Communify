@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background-color: #0E1024;
+  overflow: hidden;
 }
 
 .container {
@@ -65,12 +66,14 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   opacity: 60%;
   transition: all 0.7s;
+  overflow: hidden;
 }
 
 .back {
   width: 100%;
   height: 100%;
   border: none;
+  overflow: hidden;
 }
 
 h4 {
@@ -112,4 +115,36 @@ label {
   visibility: hidden;
   opacity: 0;
   top: 10%;
+}
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #0D0121;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 400ms;
+  z-index: 2000;
+}
+
+.preloader.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.preloader .preloader-text {
+  color: #838383;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-size: 15px;
+}
+
+.preloader .dots-container {
+  display: flex;
+  margin-bottom: 48px;
 }
