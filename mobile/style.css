@@ -4,6 +4,27 @@ body {
   overflow: hidden;
 }
 
+h1 {
+  font-size: 60px;
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h4 {
+  font-size: 8mm;
+  margin: 0 auto auto 0;
+  font-family: sans-serif;
+  color: #292A2D;
+  text-align: left;
+}
+
+label {
+  color: #292A2D;
+  font-family: sans-serif;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -16,14 +37,6 @@ body {
   border: none;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-}
-
-h1 {
-  font-size: 60px;
-  color: white;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  letter-spacing: 4px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .btn {
@@ -51,8 +64,8 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
-  width: 60%;
-  height: 250px;
+  width: 70mm;
+  height: 65mm;
   top: 30%;
   display: flex;
   flex-direction: column;
@@ -74,19 +87,6 @@ h1 {
   height: 100%;
   border: none;
   overflow: hidden;
-}
-
-h4 {
-  font-size: 30px;
-  margin: 0 auto auto 0;
-  font-family: sans-serif;
-  color: #292A2D;
-  text-align: left;
-}
-
-label {
-  color: #292A2D;
-  font-family: sans-serif;
 }
 
 .input {
