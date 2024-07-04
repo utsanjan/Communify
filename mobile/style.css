@@ -42,8 +42,8 @@ h1 {
 
 .active.container {
   filter: blur(15px) brightness(0.6);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 .popup-container {
@@ -51,7 +51,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
-  width: 250px;
+  width: 60%;
   height: 250px;
   top: 30%;
   display: flex;
@@ -129,7 +129,7 @@ label {
   align-items: center;
   justify-content: center;
   transition: all 400ms;
-  z-index: 2000;
+  z-index: 29000;
 }
 
 .preloader.hide {
