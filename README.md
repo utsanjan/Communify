@@ -12,7 +12,7 @@ Click on the above Communify logo to open the live application on this browser w
 [![](https://img.shields.io/github/languages/count/utsanjan/Communify?style=flat)](https://github.com/utsanjan/Communify/search?l=shell)‎ ‎
 [![](https://img.shields.io/github/languages/top/utsanjan/Communify?color=light%20green&style=flat)](https://github.com/utsanjan/Communify)‎ ‎ <br>
 
-<a href="https://communify.dopesatan.in/"><img src="https://tinyurl.com/4m585mh2" width=85%></a>
+<a href="https://communify.dopesatan.in/"><img src="https://tinyurl.com/4m585mh2" width=700></a>
 
 -	The database used here is robust, reliable, and fast so that users don't need to wait much.
 -	User verification email gets sent to the user's provided email address after registration.
