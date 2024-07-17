@@ -27,7 +27,7 @@ Click on the above Communify logo to open the live application on this browser w
 
 # 🧑🏻‍🏫 Project Group Members
 <a href="https://github.com/utsanjan/Communify/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=utsanjan/Communify" />
+<img src="https://contrib.rocks/image?repo=utsanjan/Communify" width=200>
 </a><br><br>
 
 - [Partha Sarathi Bhunia](https://github.com/parthasarathi04)
