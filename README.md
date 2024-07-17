@@ -26,6 +26,10 @@ Click on the above Communify logo to open the live application on this browser w
 #### [📑 Bachelor's Project Thesis PDF Download](https://bit.ly/3VvMBjT)
 
 # 🧑🏻‍🏫 Project Group Members
+<a href="https://github.com/utsanjan/Communify/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=utsanjan/Communify" />
+</a><br><br>
+
 - [Partha Sarathi Bhunia](https://github.com/parthasarathi04)
 - [Utsanjan Maity](https://github.com/utsanjan)
 - [Abhik Khatuya](https://github.com/ABHIK-KHATUYA)
