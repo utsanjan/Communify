@@ -24,7 +24,7 @@ eligible receiving such patches depend on the CVSS v3.0 Rating:
 ## Reporting a Vulnerability
 
 Please report (suspected) security vulnerabilities to <br>
-**[utsanjan@dopesatan.ml](mailto:utsanjan@dopesatan.in)**.
+**[utsanjan@dopesatan.in](mailto:utsanjan@dopesatan.in)**.
 If the issue is confirmed, we <br>
 will release a patch as soon as possible depending on <br>
 complexity within a few days.
