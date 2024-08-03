@@ -19,7 +19,7 @@ Click on the above Communify logo to open the live application on this browser w
 -	There is no case of redundancy in the database so it will not take extra memory space.
 -	Password recovery system is also provided in case the user forgets the password.
 -	Better component design to get better performance at peak time.
-- Secure access of confidential data by user name and password.
+- Secure access to confidential data by user name and password.
 -	This application can be accessed from any type of platform.
 -	24 X 7 application server runtime availability. 
 
