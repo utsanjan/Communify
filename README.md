@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://communify.dopesatan.in/" target="_blank"><img src="https://raw.githubusercontent.com/utsanjan/Communify/master/src/assets/images/logo.png" width="80%"></a></h1>
+<h1 align="center"><a href="https://comm-unify.netlify.app" target="_blank"><img src="https://raw.githubusercontent.com/utsanjan/Communify/master/src/assets/images/logo.png" width="80%"></a></h1>
 <p align="center">A simple Gaming Social Media Website built by using Angular-CLI for sharing gaming stats.<br>
 Click on the above Communify logo to open the live application on this browser window.</p>
 
@@ -12,7 +12,7 @@ Click on the above Communify logo to open the live application on this browser w
 [![](https://img.shields.io/github/languages/count/utsanjan/Communify?style=flat)](https://github.com/utsanjan/Communify/search?l=shell)‎ ‎
 [![](https://img.shields.io/github/languages/top/utsanjan/Communify?color=light%20green&style=flat)](https://github.com/utsanjan/Communify)‎ ‎ <br>
 
-<a href="https://communify.dopesatan.in/"><img src="https://tinyurl.com/4m585mh2" width=700></a>
+<a href="https://comm-unify.netlify.app"><img src="https://tinyurl.com/4m585mh2" width=700></a>
 
 -	The database used here is robust, reliable, and fast so that users don't need to wait much.
 -	User verification email gets sent to the user's provided email address after registration.
