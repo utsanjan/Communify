@@ -9,15 +9,310 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=1024">
 <title>Communify</title>
-<base href="https://comm-unify.netlify.app/"><meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="/"><meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet"> -->
 <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="styles.57a8be075e2ea3a6ddaf.css"></head>
+<link rel="stylesheet" href="styles.57a8be075e2ea3a6ddaf.css">
+<link rel="stylesheet" href="polish.css?v=75"></head>
 <body>
 <app-root></app-root>
-<script src="runtime.893eec05baadf402c74b.js" defer></script><script src="polyfills.620d64c306e4a7c463f2.js" defer></script>
+<script src="runtime.e7c2a1b08d4f69315e20.js" defer></script><script src="polyfills.620d64c306e4a7c463f2.js" defer></script>
 <script src="scripts.827b8ae473de45c243e0.js" defer></script><script src="main.966baf5bb8fd0e9d72c9.js" defer></script>
+<script>
+  (function () {
+    var nativeSetItem = localStorage.setItem.bind(localStorage);
+    function enterAppAfterLogin(key, value) {
+      if (key !== "user" || value !== "logged") return;
+      var path = location.pathname.replace(/\/+$/, "") || "/";
+      if (path === "/" || path === "/home" || path.indexOf("/auth/") === 0) {
+        location.assign("/post/list");
+      }
+    }
+    localStorage.setItem = function (key, value) {
+      nativeSetItem(key, value);
+      enterAppAfterLogin(key, value);
+    };
+
+    function syncHomeNav() {
+      var path = location.pathname.replace(/\/+$/, "") || "/";
+      var home = path === "/" || path === "/home";
+      document.documentElement.classList.toggle("page-home", home);
+    }
+
+    function navHref(link) {
+      var href = link.getAttribute("href") || "";
+      if (!href || href.charAt(0) !== "/") return "";
+      return href.replace(/\/+$/, "") || "/";
+    }
+
+    function navLinkMatches(href, path) {
+      if (!href) return false;
+      if (href === "/post/list") {
+        return path === "/post/list" || (path.indexOf("/post/") === 0 && path !== "/post/create");
+      }
+      if (href === "/post/create") return path === "/post/create";
+      if (href === "/user/list") return path === "/user/list";
+      if (href === "/home") return path === "/" || path === "/home";
+      if (href === "/auth/sign-in") return path === "/auth/sign-in";
+      if (href === "/auth/signup" || href === "/auth/sign-up") {
+        return path === "/auth/signup" || path === "/auth/sign-up";
+      }
+      return path === href;
+    }
+
+    function syncNav() {
+      var bar = document.querySelector("mat-toolbar.navbar ul");
+      if (!bar) return;
+      var path = location.pathname.replace(/\/+$/, "") || "/";
+      var links = bar.querySelectorAll("a");
+      var current = null;
+      for (var i = 0; i < links.length; i++) {
+        var on = navLinkMatches(navHref(links[i]), path);
+        links[i].classList.toggle("is-current", on);
+        if (on) current = links[i];
+      }
+      var indicator = bar.querySelector(".nav-indicator");
+      if (!indicator) {
+        indicator = document.createElement("span");
+        indicator.className = "nav-indicator";
+        bar.appendChild(indicator);
+      }
+      if (!current) {
+        indicator.style.opacity = "0";
+        return;
+      }
+      var barBox = bar.getBoundingClientRect();
+      var linkBox = current.getBoundingClientRect();
+      var first = indicator.getAttribute("data-ready") !== "1";
+      if (first) indicator.style.transition = "none";
+      indicator.style.opacity = "1";
+      indicator.style.width = linkBox.width + "px";
+      indicator.style.transform = "translateX(" + (linkBox.left - barBox.left) + "px)";
+      if (first) {
+        indicator.getBoundingClientRect();
+        indicator.style.transition = "";
+        indicator.setAttribute("data-ready", "1");
+      }
+    }
+
+    var pushState = history.pushState;
+    var replaceState = history.replaceState;
+    history.pushState = function () {
+      pushState.apply(this, arguments);
+      syncHomeNav();
+      syncNav();
+    };
+    history.replaceState = function () {
+      replaceState.apply(this, arguments);
+      syncHomeNav();
+      syncNav();
+    };
+    window.addEventListener("popstate", function () {
+      syncHomeNav();
+      syncNav();
+    });
+    window.addEventListener("resize", syncNav);
+    syncHomeNav();
+    syncNav();
+
+    var avatarFallback = "data:image/svg+xml," + encodeURIComponent(
+      "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'>" +
+      "<defs><clipPath id='cfav'><circle cx='20' cy='20' r='20'/></clipPath></defs>" +
+      "<g clip-path='url(#cfav)'>" +
+      "<rect width='40' height='40' fill='#e8eef8'/>" +
+      "<circle cx='20' cy='16' r='6' fill='#3f51b5'/>" +
+      "<path d='M8 34c2.2-6 6.4-9 12-9s9.8 3 12 9V48H8Z' fill='#3f51b5'/>" +
+      "</g></svg>"
+    );
+    document.addEventListener("error", function (event) {
+      var img = event.target;
+      if (!img || !img.classList || !img.classList.contains("avatar-comments")) return;
+      if (img.getAttribute("data-fallback") === "1") return;
+      img.setAttribute("data-fallback", "1");
+      img.alt = "";
+      img.src = avatarFallback;
+    }, true);
+
+    function setShareLabel(text) {
+      var button = document.querySelector(".create-post-section button.btn-submit");
+      if (!button) return;
+      var wrapper = button.querySelector(".mat-button-wrapper") || button;
+      var nodes = wrapper.childNodes;
+      for (var i = 0; i < nodes.length; i++) {
+        if (nodes[i].nodeType === 3 && nodes[i].nodeValue.trim()) {
+          nodes[i].nodeValue = text;
+          return;
+        }
+      }
+    }
+
+    function enhanceSharePost() {
+      var section = document.querySelector(".create-post-section");
+      if (!section || section.getAttribute("data-share-ready") === "1") return;
+      var form = section.querySelector("form");
+      var upload = section.querySelector(".upload");
+      var submit = form.querySelector("button.btn-submit");
+      var input = upload && upload.querySelector('input[type="file"]');
+      if (!form || !upload || !submit || !input) return;
+      section.setAttribute("data-share-ready", "1");
+      input.id = "upload";
+      input.setAttribute("accept", "image/*");
+      var slot = document.createElement("label");
+      slot.className = "photo-slot";
+      slot.htmlFor = "upload";
+      slot.innerHTML = '<span class="photo-slot-label">Add a photo</span><img alt="">';
+      upload.insertBefore(slot, upload.firstChild);
+      form.insertBefore(upload, submit);
+      setShareLabel("Share");
+      input.addEventListener("change", function () {
+        var file = input.files && input.files[0];
+        var image = slot.querySelector("img");
+        var caption = slot.querySelector(".photo-slot-label");
+        if (!file || !image || !caption) return;
+        if (image.getAttribute("data-url")) URL.revokeObjectURL(image.getAttribute("data-url"));
+        var url = URL.createObjectURL(file);
+        image.setAttribute("data-url", url);
+        image.src = url;
+        slot.classList.add("has-photo");
+        caption.textContent = "Change photo";
+      });
+    }
+
+    function showUploadAlert() {
+      var message = document.querySelector(".create-post-section .upload-msg");
+      if (!message || message.getAttribute("data-alerted") === "1") return;
+      if (!(message.textContent || "").trim()) return;
+      message.setAttribute("data-alerted", "1");
+      var host = document.querySelector("app-create-post");
+      var context = host && host.__ngContext__;
+      if (!context) return;
+      for (var i = 0; i < context.length; i++) {
+        var candidate = context[i];
+        if (candidate && candidate.snackbar && typeof candidate.snackbar.open === "function") {
+          candidate.snackbar.open("Photo uploaded", "Undo", { duration: 3000 });
+          return;
+        }
+      }
+    }
+
+    window.addEventListener("cf-share", function (event) {
+      if (event.detail === "start") setShareLabel("Sharing…");
+      if (event.detail === "fail" || event.detail === "needphoto") setShareLabel("Share");
+    });
+
+    function readVotes() {
+      try {
+        var saved = JSON.parse(localStorage.getItem("cfVotes") || "{}");
+        return saved && typeof saved === "object" ? saved : {};
+      } catch (err) {
+        return {};
+      }
+    }
+
+    function writeVotes(votes) {
+      nativeSetItem("cfVotes", JSON.stringify(votes));
+    }
+
+    function cardComponent(node) {
+      var host = node.closest("app-card");
+      var context = host && host.__ngContext__;
+      if (!context) return null;
+      for (var i = 0; i < context.length; i++) {
+        if (context[i] && context[i].post && context[i].post.id) return context[i];
+      }
+      return null;
+    }
+
+    function paintVoteButtons() {
+      var votes = readVotes();
+      var cards = document.querySelectorAll("app-card");
+      for (var i = 0; i < cards.length; i++) {
+        var component = cardComponent(cards[i]);
+        var vote = component ? votes[component.post.id] : "";
+        var buttons = cards[i].querySelectorAll(".like-dislike-btn button");
+        for (var b = 0; b < buttons.length; b++) {
+          var name = (buttons[b].textContent || "").indexOf("thumb_up") !== -1 ? "like" : "dislike";
+          buttons[b].classList.toggle("is-voted", vote === name);
+        }
+      }
+    }
+
+    var voteBusy = {};
+    document.addEventListener("click", function (event) {
+      var node = event.target && event.target.nodeType === 1 ? event.target : event.target && event.target.parentElement;
+      var button = node && node.closest && node.closest(".like-dislike-btn button");
+      if (!button) return;
+      var iconName = (button.textContent || "").trim();
+      var choice = iconName.indexOf("thumb_up") !== -1 ? "like" : iconName.indexOf("thumb_down") !== -1 ? "dislike" : "";
+      if (!choice) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      var component = cardComponent(button);
+      if (!component || voteBusy[component.post.id]) return;
+      var post = component.post;
+      var votes = readVotes();
+      var previous = votes[post.id] || "";
+      var likes = Number(post.likes) || 0;
+      var dislikes = Number(post.dislikes) || 0;
+      var originalLikes = likes;
+      var originalDislikes = dislikes;
+      if (previous === "like") likes = Math.max(0, likes - 1);
+      if (previous === "dislike") dislikes = Math.max(0, dislikes - 1);
+      var next = previous === choice ? "" : choice;
+      if (next === "like") likes += 1;
+      if (next === "dislike") dislikes += 1;
+      if (next) votes[post.id] = next;
+      else delete votes[post.id];
+      writeVotes(votes);
+      post.likes = likes;
+      post.dislikes = dislikes;
+      var row = button.closest(".like-dislike-btn");
+      var likeCount = row.querySelector(".likes");
+      var dislikeCount = row.querySelector(".dislikes");
+      if (likeCount) likeCount.textContent = " " + likes + " ";
+      if (dislikeCount) dislikeCount.textContent = " " + dislikes + " ";
+      paintVoteButtons();
+      voteBusy[post.id] = true;
+      var url = "https://firestore.googleapis.com/v1/projects/greenhouse-e7063/databases/(default)/documents/posts/"
+        + post.id
+        + "?updateMask.fieldPaths=likes&updateMask.fieldPaths=dislikes&key=AIzaSyAOdlPjBMxaGFgM8qb8bf1uhNdJgrsvfSk";
+      fetch(url, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fields: {
+            likes: { integerValue: String(likes) },
+            dislikes: { integerValue: String(dislikes) }
+          }
+        })
+      }).then(function (response) {
+        voteBusy[post.id] = false;
+        if (!response.ok) throw new Error("vote failed");
+      }).catch(function () {
+        voteBusy[post.id] = false;
+        post.likes = originalLikes;
+        post.dislikes = originalDislikes;
+        var saved = readVotes();
+        if (previous) saved[post.id] = previous;
+        else delete saved[post.id];
+        writeVotes(saved);
+        if (likeCount) likeCount.textContent = " " + originalLikes + " ";
+        if (dislikeCount) dislikeCount.textContent = " " + originalDislikes + " ";
+        paintVoteButtons();
+      });
+    }, true);
+
+    var shareObserver = new MutationObserver(function () {
+      enhanceSharePost();
+      showUploadAlert();
+      paintVoteButtons();
+      syncNav();
+    });
+    shareObserver.observe(document.documentElement, { childList: true, subtree: true });
+    enhanceSharePost();
+  })();
+</script>
 </body>
 </html>

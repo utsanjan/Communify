@@ -1,0 +1,9 @@
+{
+    "name": "@angular/fire/auth-guard",
+    "main": "../bundles/auth-guard.umd.js",
+    "module": "index.js",
+    "es2015": "./es2015/index.js",
+    "typings": "index.d.ts",
+    "sideEffects": false
+  }
+  

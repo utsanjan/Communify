@@ -1,0 +1,1 @@
+{"version":3,"file":"public_api.js","sourceRoot":"","sources":["../../../src/performance/public_api.ts"],"names":[],"mappings":"AAAA,cAAc,eAAe,CAAC;AAC9B,cAAc,sBAAsB,CAAC","sourcesContent":["export * from './performance';\nexport * from './performance.module';\n"]}

@@ -1,0 +1,66 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { InjectionToken } from '@angular/core';
+/** @type {?} */
+export const _ROOT_STORE_GUARD = new InjectionToken('@ngrx/store Internal Root Guard');
+/** @type {?} */
+export const _INITIAL_STATE = new InjectionToken('@ngrx/store Internal Initial State');
+/** @type {?} */
+export const INITIAL_STATE = new InjectionToken('@ngrx/store Initial State');
+/** @type {?} */
+export const REDUCER_FACTORY = new InjectionToken('@ngrx/store Reducer Factory');
+/** @type {?} */
+export const _REDUCER_FACTORY = new InjectionToken('@ngrx/store Internal Reducer Factory Provider');
+/** @type {?} */
+export const INITIAL_REDUCERS = new InjectionToken('@ngrx/store Initial Reducers');
+/** @type {?} */
+export const _INITIAL_REDUCERS = new InjectionToken('@ngrx/store Internal Initial Reducers');
+/** @type {?} */
+export const STORE_FEATURES = new InjectionToken('@ngrx/store Store Features');
+/** @type {?} */
+export const _STORE_REDUCERS = new InjectionToken('@ngrx/store Internal Store Reducers');
+/** @type {?} */
+export const _FEATURE_REDUCERS = new InjectionToken('@ngrx/store Internal Feature Reducers');
+/** @type {?} */
+export const _FEATURE_CONFIGS = new InjectionToken('@ngrx/store Internal Feature Configs');
+/** @type {?} */
+export const _STORE_FEATURES = new InjectionToken('@ngrx/store Internal Store Features');
+/** @type {?} */
+export const _FEATURE_REDUCERS_TOKEN = new InjectionToken('@ngrx/store Internal Feature Reducers Token');
+/** @type {?} */
+export const FEATURE_REDUCERS = new InjectionToken('@ngrx/store Feature Reducers');
+/**
+ * User-defined meta reducers from StoreModule.forRoot()
+ * @type {?}
+ */
+export const USER_PROVIDED_META_REDUCERS = new InjectionToken('@ngrx/store User Provided Meta Reducers');
+/**
+ * Meta reducers defined either internally by \@ngrx/store or by library authors
+ * @type {?}
+ */
+export const META_REDUCERS = new InjectionToken('@ngrx/store Meta Reducers');
+/**
+ * Concats the user provided meta reducers and the meta reducers provided on the multi
+ * injection token
+ * @type {?}
+ */
+export const _RESOLVED_META_REDUCERS = new InjectionToken('@ngrx/store Internal Resolved Meta Reducers');
+/**
+ * Runtime checks defined by the user via an InjectionToken
+ * Defaults to `_USER_RUNTIME_CHECKS`
+ * @type {?}
+ */
+export const USER_RUNTIME_CHECKS = new InjectionToken('@ngrx/store User Runtime Checks Config');
+/**
+ * Runtime checks defined by the user via forRoot()
+ * @type {?}
+ */
+export const _USER_RUNTIME_CHECKS = new InjectionToken('@ngrx/store Internal User Runtime Checks Config');
+/**
+ * Runtime checks currently in use
+ * @type {?}
+ */
+export const _ACTIVE_RUNTIME_CHECKS = new InjectionToken('@ngrx/store Internal Runtime Checks');
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidG9rZW5zLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vbW9kdWxlcy9zdG9yZS9zcmMvdG9rZW5zLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxPQUFPLEVBQUUsY0FBYyxFQUFFLE1BQU0sZUFBZSxDQUFDOztBQUcvQyxNQUFNLE9BQU8saUJBQWlCLEdBQUcsSUFBSSxjQUFjLENBQ2pELGlDQUFpQyxDQUNsQzs7QUFDRCxNQUFNLE9BQU8sY0FBYyxHQUFHLElBQUksY0FBYyxDQUM5QyxvQ0FBb0MsQ0FDckM7O0FBQ0QsTUFBTSxPQUFPLGFBQWEsR0FBRyxJQUFJLGNBQWMsQ0FBQywyQkFBMkIsQ0FBQzs7QUFDNUUsTUFBTSxPQUFPLGVBQWUsR0FBRyxJQUFJLGNBQWMsQ0FDL0MsNkJBQTZCLENBQzlCOztBQUNELE1BQU0sT0FBTyxnQkFBZ0IsR0FBRyxJQUFJLGNBQWMsQ0FDaEQsK0NBQStDLENBQ2hEOztBQUNELE1BQU0sT0FBTyxnQkFBZ0IsR0FBRyxJQUFJLGNBQWMsQ0FDaEQsOEJBQThCLENBQy9COztBQUNELE1BQU0sT0FBTyxpQkFBaUIsR0FBRyxJQUFJLGNBQWMsQ0FDakQsdUNBQXVDLENBQ3hDOztBQUNELE1BQU0sT0FBTyxjQUFjLEdBQUcsSUFBSSxjQUFjLENBQUMsNEJBQTRCLENBQUM7O0FBQzlFLE1BQU0sT0FBTyxlQUFlLEdBQUcsSUFBSSxjQUFjLENBQy9DLHFDQUFxQyxDQUN0Qzs7QUFDRCxNQUFNLE9BQU8saUJBQWlCLEdBQUcsSUFBSSxjQUFjLENBQ2pELHVDQUF1QyxDQUN4Qzs7QUFFRCxNQUFNLE9BQU8sZ0JBQWdCLEdBQUcsSUFBSSxjQUFjLENBQ2hELHNDQUFzQyxDQUN2Qzs7QUFFRCxNQUFNLE9BQU8sZUFBZSxHQUFHLElBQUksY0FBYyxDQUMvQyxxQ0FBcUMsQ0FDdEM7O0FBRUQsTUFBTSxPQUFPLHVCQUF1QixHQUFHLElBQUksY0FBYyxDQUN2RCw2Q0FBNkMsQ0FDOUM7O0FBQ0QsTUFBTSxPQUFPLGdCQUFnQixHQUFHLElBQUksY0FBYyxDQUNoRCw4QkFBOEIsQ0FDL0I7Ozs7O0FBS0QsTUFBTSxPQUFPLDJCQUEyQixHQUFHLElBQUksY0FBYyxDQUMzRCx5Q0FBeUMsQ0FDMUM7Ozs7O0FBS0QsTUFBTSxPQUFPLGFBQWEsR0FBRyxJQUFJLGNBQWMsQ0FDN0MsMkJBQTJCLENBQzVCOzs7Ozs7QUFNRCxNQUFNLE9BQU8sdUJBQXVCLEdBQUcsSUFBSSxjQUFjLENBQ3ZELDZDQUE2QyxDQUM5Qzs7Ozs7O0FBTUQsTUFBTSxPQUFPLG1CQUFtQixHQUFHLElBQUksY0FBYyxDQUNuRCx3Q0FBd0MsQ0FDekM7Ozs7O0FBS0QsTUFBTSxPQUFPLG9CQUFvQixHQUFHLElBQUksY0FBYyxDQUNwRCxpREFBaUQsQ0FDbEQ7Ozs7O0FBS0QsTUFBTSxPQUFPLHNCQUFzQixHQUFHLElBQUksY0FBYyxDQUN0RCxxQ0FBcUMsQ0FDdEMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBJbmplY3Rpb25Ub2tlbiB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHsgUnVudGltZUNoZWNrcywgTWV0YVJlZHVjZXIgfSBmcm9tICcuL21vZGVscyc7XG5cbmV4cG9ydCBjb25zdCBfUk9PVF9TVE9SRV9HVUFSRCA9IG5ldyBJbmplY3Rpb25Ub2tlbjx2b2lkPihcbiAgJ0BuZ3J4L3N0b3JlIEludGVybmFsIFJvb3QgR3VhcmQnXG4pO1xuZXhwb3J0IGNvbnN0IF9JTklUSUFMX1NUQVRFID0gbmV3IEluamVjdGlvblRva2VuKFxuICAnQG5ncngvc3RvcmUgSW50ZXJuYWwgSW5pdGlhbCBTdGF0ZSdcbik7XG5leHBvcnQgY29uc3QgSU5JVElBTF9TVEFURSA9IG5ldyBJbmplY3Rpb25Ub2tlbignQG5ncngvc3RvcmUgSW5pdGlhbCBTdGF0ZScpO1xuZXhwb3J0IGNvbnN0IFJFRFVDRVJfRkFDVE9SWSA9IG5ldyBJbmplY3Rpb25Ub2tlbihcbiAgJ0BuZ3J4L3N0b3JlIFJlZHVjZXIgRmFjdG9yeSdcbik7XG5leHBvcnQgY29uc3QgX1JFRFVDRVJfRkFDVE9SWSA9IG5ldyBJbmplY3Rpb25Ub2tlbihcbiAgJ0BuZ3J4L3N0b3JlIEludGVybmFsIFJlZHVjZXIgRmFjdG9yeSBQcm92aWRlcidcbik7XG5leHBvcnQgY29uc3QgSU5JVElBTF9SRURVQ0VSUyA9IG5ldyBJbmplY3Rpb25Ub2tlbihcbiAgJ0BuZ3J4L3N0b3JlIEluaXRpYWwgUmVkdWNlcnMnXG4pO1xuZXhwb3J0IGNvbnN0IF9JTklUSUFMX1JFRFVDRVJTID0gbmV3IEluamVjdGlvblRva2VuKFxuICAnQG5ncngvc3RvcmUgSW50ZXJuYWwgSW5pdGlhbCBSZWR1Y2Vycydcbik7XG5leHBvcnQgY29uc3QgU1RPUkVfRkVBVFVSRVMgPSBuZXcgSW5qZWN0aW9uVG9rZW4oJ0BuZ3J4L3N0b3JlIFN0b3JlIEZlYXR1cmVzJyk7XG5leHBvcnQgY29uc3QgX1NUT1JFX1JFRFVDRVJTID0gbmV3IEluamVjdGlvblRva2VuKFxuICAnQG5ncngvc3RvcmUgSW50ZXJuYWwgU3RvcmUgUmVkdWNlcnMnXG4pO1xuZXhwb3J0IGNvbnN0IF9GRUFUVVJFX1JFRFVDRVJTID0gbmV3IEluamVjdGlvblRva2VuKFxuICAnQG5ncngvc3RvcmUgSW50ZXJuYWwgRmVhdHVyZSBSZWR1Y2Vycydcbik7XG5cbmV4cG9ydCBjb25zdCBfRkVBVFVSRV9DT05GSUdTID0gbmV3IEluamVjdGlvblRva2VuKFxuICAnQG5ncngvc3RvcmUgSW50ZXJuYWwgRmVhdHVyZSBDb25maWdzJ1xuKTtcblxuZXhwb3J0IGNvbnN0IF9TVE9SRV9GRUFUVVJFUyA9IG5ldyBJbmplY3Rpb25Ub2tlbihcbiAgJ0BuZ3J4L3N0b3JlIEludGVybmFsIFN0b3JlIEZlYXR1cmVzJ1xuKTtcblxuZXhwb3J0IGNvbnN0IF9GRUFUVVJFX1JFRFVDRVJTX1RPS0VOID0gbmV3IEluamVjdGlvblRva2VuKFxuICAnQG5ncngvc3RvcmUgSW50ZXJuYWwgRmVhdHVyZSBSZWR1Y2VycyBUb2tlbidcbik7XG5leHBvcnQgY29uc3QgRkVBVFVSRV9SRURVQ0VSUyA9IG5ldyBJbmplY3Rpb25Ub2tlbihcbiAgJ0BuZ3J4L3N0b3JlIEZlYXR1cmUgUmVkdWNlcnMnXG4pO1xuXG4vKipcbiAqIFVzZXItZGVmaW5lZCBtZXRhIHJlZHVjZXJzIGZyb20gU3RvcmVNb2R1bGUuZm9yUm9vdCgpXG4gKi9cbmV4cG9ydCBjb25zdCBVU0VSX1BST1ZJREVEX01FVEFfUkVEVUNFUlMgPSBuZXcgSW5qZWN0aW9uVG9rZW48TWV0YVJlZHVjZXJbXT4oXG4gICdAbmdyeC9zdG9yZSBVc2VyIFByb3ZpZGVkIE1ldGEgUmVkdWNlcnMnXG4pO1xuXG4vKipcbiAqIE1ldGEgcmVkdWNlcnMgZGVmaW5lZCBlaXRoZXIgaW50ZXJuYWxseSBieSBAbmdyeC9zdG9yZSBvciBieSBsaWJyYXJ5IGF1dGhvcnNcbiAqL1xuZXhwb3J0IGNvbnN0IE1FVEFfUkVEVUNFUlMgPSBuZXcgSW5qZWN0aW9uVG9rZW48TWV0YVJlZHVjZXJbXT4oXG4gICdAbmdyeC9zdG9yZSBNZXRhIFJlZHVjZXJzJ1xuKTtcblxuLyoqXG4gKiBDb25jYXRzIHRoZSB1c2VyIHByb3ZpZGVkIG1ldGEgcmVkdWNlcnMgYW5kIHRoZSBtZXRhIHJlZHVjZXJzIHByb3ZpZGVkIG9uIHRoZSBtdWx0aVxuICogaW5qZWN0aW9uIHRva2VuXG4gKi9cbmV4cG9ydCBjb25zdCBfUkVTT0xWRURfTUVUQV9SRURVQ0VSUyA9IG5ldyBJbmplY3Rpb25Ub2tlbjxNZXRhUmVkdWNlcj4oXG4gICdAbmdyeC9zdG9yZSBJbnRlcm5hbCBSZXNvbHZlZCBNZXRhIFJlZHVjZXJzJ1xuKTtcblxuLyoqXG4gKiBSdW50aW1lIGNoZWNrcyBkZWZpbmVkIGJ5IHRoZSB1c2VyIHZpYSBhbiBJbmplY3Rpb25Ub2tlblxuICogRGVmYXVsdHMgdG8gYF9VU0VSX1JVTlRJTUVfQ0hFQ0tTYFxuICovXG5leHBvcnQgY29uc3QgVVNFUl9SVU5USU1FX0NIRUNLUyA9IG5ldyBJbmplY3Rpb25Ub2tlbjxSdW50aW1lQ2hlY2tzPihcbiAgJ0BuZ3J4L3N0b3JlIFVzZXIgUnVudGltZSBDaGVja3MgQ29uZmlnJ1xuKTtcblxuLyoqXG4gKiBSdW50aW1lIGNoZWNrcyBkZWZpbmVkIGJ5IHRoZSB1c2VyIHZpYSBmb3JSb290KClcbiAqL1xuZXhwb3J0IGNvbnN0IF9VU0VSX1JVTlRJTUVfQ0hFQ0tTID0gbmV3IEluamVjdGlvblRva2VuPFJ1bnRpbWVDaGVja3M+KFxuICAnQG5ncngvc3RvcmUgSW50ZXJuYWwgVXNlciBSdW50aW1lIENoZWNrcyBDb25maWcnXG4pO1xuXG4vKipcbiAqIFJ1bnRpbWUgY2hlY2tzIGN1cnJlbnRseSBpbiB1c2VcbiAqL1xuZXhwb3J0IGNvbnN0IF9BQ1RJVkVfUlVOVElNRV9DSEVDS1MgPSBuZXcgSW5qZWN0aW9uVG9rZW48UnVudGltZUNoZWNrcz4oXG4gICdAbmdyeC9zdG9yZSBJbnRlcm5hbCBSdW50aW1lIENoZWNrcydcbik7XG4iXX0=

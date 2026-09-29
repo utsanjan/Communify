@@ -1,0 +1,1242 @@
+/* One visual system for the published gh-pages build. */
+
+.loader,
+.overlay,
+.dark {
+  pointer-events: none !important;
+}
+
+html.page-home app-navbar,
+html.page-home mat-toolbar.navbar {
+  display: none !important;
+}
+
+html.page-home,
+html.page-home body,
+html.page-home mat-sidenav-content.site {
+  overflow: hidden !important;
+  height: 100% !important;
+}
+
+html.page-home .u-section-2 .u-sheet-1 {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100vh !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 2 !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+}
+
+html.page-home h1.glitch {
+  margin: 0 auto !important;
+  width: auto !important;
+  max-width: 100% !important;
+  flex: 0 0 auto !important;
+}
+
+html.page-home .u-text-2 {
+  margin: -12px auto 10px !important;
+  width: auto !important;
+  max-width: min(770px, 100%) !important;
+  text-align: center !important;
+  letter-spacing: 2.2px !important;
+  flex: 0 0 auto !important;
+}
+
+html.page-home a.u-btn-6 {
+  margin: 22px auto 0 !important;
+  flex: 0 0 auto !important;
+  position: relative !important;
+  border-radius: 14px !important;
+}
+
+mat-toolbar.navbar.mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  height: 64px !important;
+  min-height: 64px !important;
+  padding: 0 28px !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  border-bottom: 0 !important;
+  outline: none !important;
+  color: #f4f7fb !important;
+}
+
+mat-toolbar.navbar a {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+  line-height: 32px !important;
+  text-decoration: none !important;
+  color: rgba(244, 247, 251, 0.72) !important;
+}
+
+mat-toolbar.navbar a.title {
+  padding: 0 !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  color: #fff !important;
+  background: none !important;
+  transition: opacity 0.2s ease !important;
+}
+
+mat-toolbar.navbar a.title:hover {
+  opacity: 0.78 !important;
+}
+
+mat-toolbar.navbar ul {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  margin: 0 8px 0 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+mat-toolbar.navbar ul > li {
+  margin: 0 !important;
+  list-style: none !important;
+}
+
+mat-toolbar.navbar ul a {
+  position: relative !important;
+  z-index: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 32px !important;
+  padding: 0 12px !important;
+  border-radius: 10px !important;
+  background: transparent !important;
+  transition: color 0.2s ease, background-color 0.2s ease !important;
+}
+
+mat-toolbar.navbar ul a:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+mat-toolbar.navbar ul a.is-current {
+  color: #fff !important;
+  background: transparent !important;
+}
+
+mat-toolbar.navbar .nav-indicator {
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  z-index: 0 !important;
+  height: 32px !important;
+  margin-top: -16px !important;
+  border-radius: 10px !important;
+  background: rgba(255, 255, 255, 0.14) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  pointer-events: none !important;
+  opacity: 0;
+  transform: translateX(0);
+  transition: transform 0.32s cubic-bezier(0.22, 0.8, 0.24, 1), width 0.32s cubic-bezier(0.22, 0.8, 0.24, 1), opacity 0.2s ease !important;
+}
+
+mat-toolbar.navbar a.logout {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 32px !important;
+  margin: 0 0 0 12px !important;
+  padding: 0 4px 0 16px !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 0 !important;
+  background: none !important;
+  transition: color 0.2s ease !important;
+}
+
+mat-toolbar.navbar a.logout:hover {
+  color: #fff !important;
+}
+
+mat-toolbar.navbar .welcome-msg {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: rgba(244, 247, 251, 0.7) !important;
+}
+
+app-footer section {
+  height: auto !important;
+  overflow: visible !important;
+  background: #0d101e !important;
+  text-decoration: none !important;
+}
+
+app-footer footer {
+  background: #0d101e !important;
+}
+
+app-footer .logo_name img {
+  width: 180px !important;
+  height: auto;
+  display: block;
+}
+
+app-footer .content {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+.sign-in-section,
+.sign-up-container,
+.create-post-section,
+app-forgot-password .container,
+form.card,
+mat-card.card,
+.wrapper > .card {
+  opacity: 1 !important;
+  background: rgba(240, 255, 255, 0.42) !important;
+  color: #131d26 !important;
+  border: 1px solid rgba(255, 255, 255, 0.38) !important;
+  box-shadow: none !important;
+  transform: none !important;
+  flex: 0 0 auto !important;
+  box-sizing: border-box !important;
+  width: min(420px, calc(100% - 32px)) !important;
+  max-width: 420px !important;
+  margin: 32px auto 40px !important;
+  padding: 32px 28px 28px !important;
+  border-radius: 24px !important;
+}
+
+.sign-up-container .container,
+app-forgot-password form,
+.create-post-section form,
+.sign-in-section form {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  box-sizing: border-box !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+.sign-in-section br,
+.sign-up-container br,
+app-forgot-password br,
+.create-post-section br,
+form.card br {
+  display: none !important;
+}
+
+.sign-up-container .container > span,
+.sign-up-container .container > div > span {
+  display: none !important;
+}
+
+.sign-up-container h4:empty {
+  display: none !important;
+  margin: 0 !important;
+}
+
+.sign-in-section .divider-container,
+.sign-up-container .divider-container {
+  margin: 12px 0 8px !important;
+}
+
+.sign-in-section > mat-divider,
+.sign-up-container > mat-divider {
+  margin: 8px 0 0 !important;
+}
+
+.sign-in-section div:has(> button.mat-primary),
+.sign-up-container div:has(> button.mat-primary) {
+  margin-bottom: 0 !important;
+}
+
+.sign-up-container mat-form-field,
+.sign-in-section mat-form-field,
+.create-post-section mat-form-field,
+app-forgot-password mat-form-field,
+form.card mat-form-field {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 0 16px !important;
+}
+
+.sign-up-container mat-form-field:not(:last-of-type),
+.sign-in-section mat-form-field:not(:last-of-type),
+.create-post-section mat-form-field:not(:last-of-type),
+app-forgot-password mat-form-field:not(:last-of-type),
+form.card mat-form-field:not(:last-of-type),
+.sign-up-container form > div > mat-form-field:last-of-type {
+  margin-bottom: 21px !important;
+}
+
+.sign-up-container .mat-form-field-wrapper,
+.sign-in-section .mat-form-field-wrapper,
+.create-post-section .mat-form-field-wrapper,
+app-forgot-password .mat-form-field-wrapper,
+form.card .mat-form-field-wrapper {
+  padding-bottom: 0 !important;
+}
+
+.sign-up-container .mat-form-field-flex,
+.sign-in-section .mat-form-field-flex,
+.create-post-section .mat-form-field-flex,
+app-forgot-password .mat-form-field-flex,
+form.card .mat-form-field-flex {
+  display: flex !important;
+  align-items: center !important;
+  min-height: 48px !important;
+  margin-top: 16px !important;
+  padding: 0 14px !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+  border: 1px solid rgba(255, 255, 255, 0.72) !important;
+  border-radius: 14px !important;
+  box-sizing: border-box !important;
+}
+
+.sign-up-container .mat-focused .mat-form-field-flex,
+.sign-in-section .mat-focused .mat-form-field-flex,
+.create-post-section .mat-focused .mat-form-field-flex,
+app-forgot-password .mat-focused .mat-form-field-flex,
+form.card .mat-focused .mat-form-field-flex,
+.sign-up-container mat-form-field:focus-within .mat-form-field-flex,
+.sign-in-section mat-form-field:focus-within .mat-form-field-flex,
+.create-post-section mat-form-field:focus-within .mat-form-field-flex,
+app-forgot-password mat-form-field:focus-within .mat-form-field-flex,
+form.card mat-form-field:focus-within .mat-form-field-flex {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-color: #3f51b5 !important;
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.16) !important;
+}
+
+.sign-up-container .mat-form-field-invalid .mat-form-field-flex,
+.sign-in-section .mat-form-field-invalid .mat-form-field-flex,
+.create-post-section .mat-form-field-invalid .mat-form-field-flex,
+app-forgot-password .mat-form-field-invalid .mat-form-field-flex,
+form.card .mat-form-field-invalid .mat-form-field-flex {
+  border-color: #c62828 !important;
+}
+
+.sign-up-container .mat-form-field-infix,
+.sign-in-section .mat-form-field-infix,
+.create-post-section .mat-form-field-infix,
+app-forgot-password .mat-form-field-infix,
+form.card .mat-form-field-infix {
+  width: 100% !important;
+  padding: 12px 0 !important;
+  border-top: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.sign-up-container .mat-form-field-label-wrapper,
+.sign-in-section .mat-form-field-label-wrapper,
+.create-post-section .mat-form-field-label-wrapper,
+app-forgot-password .mat-form-field-label-wrapper,
+form.card .mat-form-field-label-wrapper {
+  top: -24px !important;
+  height: auto !important;
+  overflow: visible !important;
+  pointer-events: none !important;
+}
+
+.sign-up-container .mat-form-field-label,
+.sign-in-section .mat-form-field-label,
+.create-post-section .mat-form-field-label,
+app-forgot-password .mat-form-field-label,
+form.card .mat-form-field-label {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  transform: none !important;
+  width: auto !important;
+  color: #15202b !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.sign-up-container .mat-form-field-underline,
+.sign-in-section .mat-form-field-underline,
+.create-post-section .mat-form-field-underline,
+app-forgot-password .mat-form-field-underline,
+form.card .mat-form-field-underline,
+.sign-up-container .mat-form-field-ripple,
+.sign-in-section .mat-form-field-ripple,
+.create-post-section .mat-form-field-ripple,
+app-forgot-password .mat-form-field-ripple,
+form.card .mat-form-field-ripple {
+  display: none !important;
+}
+
+.sign-up-container .mat-input-element,
+.sign-in-section .mat-input-element,
+.create-post-section .mat-input-element,
+app-forgot-password .mat-input-element,
+form.card .mat-input-element {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 15px !important;
+  color: #131d26 !important;
+  caret-color: #3f51b5 !important;
+}
+
+.sign-up-container .mat-input-element::placeholder,
+.sign-in-section .mat-input-element::placeholder,
+.create-post-section .mat-input-element::placeholder,
+app-forgot-password .mat-input-element::placeholder,
+form.card .mat-input-element::placeholder {
+  color: transparent !important;
+}
+
+.sign-up-container .mat-form-field-subscript-wrapper,
+.sign-in-section .mat-form-field-subscript-wrapper,
+.create-post-section .mat-form-field-subscript-wrapper,
+app-forgot-password .mat-form-field-subscript-wrapper,
+form.card .mat-form-field-subscript-wrapper {
+  position: absolute !important;
+  top: 32px !important;
+  left: auto !important;
+  right: 9px !important;
+  width: auto !important;
+  height: 16px !important;
+  text-align: right !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  pointer-events: none !important;
+  font-size: 10px !important;
+}
+
+.sign-up-container .mat-form-field-subscript-wrapper:not(:has(mat-error)),
+.sign-in-section .mat-form-field-subscript-wrapper:not(:has(mat-error)),
+.create-post-section .mat-form-field-subscript-wrapper:not(:has(mat-error)),
+app-forgot-password .mat-form-field-subscript-wrapper:not(:has(mat-error)),
+form.card .mat-form-field-subscript-wrapper:not(:has(mat-error)) {
+  display: none !important;
+}
+
+.sign-up-container mat-error,
+.sign-in-section mat-error,
+.create-post-section mat-error,
+app-forgot-password mat-error,
+form.card mat-error {
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 8px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.01em !important;
+  color: #9f1239 !important;
+  white-space: nowrap !important;
+  text-shadow:
+    0 0 6px #fff,
+    0 0 6px #fff,
+    0 0 10px #fff,
+    0 0 14px rgba(255, 255, 255, 0.95) !important;
+}
+
+.sign-in-section h2,
+.sign-up-container h2,
+.create-post-section h2,
+form.card h2,
+app-forgot-password h3 {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+  color: #131d26 !important;
+  margin: 0 0 16px !important;
+}
+
+app-forgot-password h3 {
+  margin-bottom: 2px !important;
+}
+
+app-forgot-password p.text-center {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  color: #15202b !important;
+  margin: 0 0 28px !important;
+}
+
+.sign-in-section .mat-raised-button,
+.sign-up-container .mat-raised-button,
+.create-post-section .mat-raised-button,
+.create-post-section .btn-upload,
+app-forgot-password .mat-raised-button,
+form.card .search-btn {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  line-height: 44px !important;
+  margin: 10px 0 0 !important;
+  padding: 0 16px !important;
+  border-radius: 14px !important;
+  box-sizing: border-box !important;
+  font-family: Montserrat, sans-serif !important;
+  font-weight: 700 !important;
+  transform: none !important;
+  align-self: stretch !important;
+}
+
+.sign-in-section .mat-raised-button.mat-primary:not([disabled]),
+.sign-up-container .mat-raised-button.mat-primary:not([disabled]),
+.create-post-section .mat-raised-button.mat-primary:not([disabled]),
+.create-post-section .btn-upload,
+app-forgot-password .mat-raised-button.mat-primary:not([disabled]),
+form.card .search-btn {
+  background: #3f51b5 !important;
+  color: #fff !important;
+}
+
+.sign-in-section .mat-raised-button[disabled],
+.sign-up-container .mat-raised-button[disabled],
+.create-post-section .mat-raised-button[disabled],
+app-forgot-password .mat-raised-button[disabled],
+form.card .search-btn[disabled] {
+  background: rgba(19, 29, 38, 0.14) !important;
+  color: #2c3340 !important;
+}
+
+.sign-up-container > div:last-child,
+.sign-in-section div:has(> a.redirect),
+.sign-in-section div:has(> span > a.redirect),
+app-forgot-password span:has(> a.redirect) {
+  margin: 10px 0 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  border-radius: 0 !important;
+  color: #101820 !important;
+  text-align: center !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.5 !important;
+  text-shadow:
+    0 0 14px rgba(255, 255, 255, 0.9),
+    0 0 28px rgba(255, 255, 255, 0.75),
+    0 0 46px rgba(255, 255, 255, 0.55) !important;
+}
+
+.sign-in-section span br,
+.sign-up-container span br,
+app-forgot-password span br {
+  display: none !important;
+}
+
+.sign-in-section a.redirect,
+.sign-up-container a.redirect,
+app-forgot-password a.redirect {
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  color: #283593 !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  text-decoration: none !important;
+  text-shadow:
+    0 0 14px rgba(255, 255, 255, 0.9),
+    0 0 28px rgba(255, 255, 255, 0.75),
+    0 0 46px rgba(255, 255, 255, 0.55) !important;
+}
+
+.sign-in-section span a.redirect,
+.sign-up-container a.redirect,
+app-forgot-password span a.redirect {
+  margin-left: 6px !important;
+}
+
+.create-post-section .upload {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 16px !important;
+  padding: 0 !important;
+}
+
+.create-post-section .photo-slot {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 148px !important;
+  margin: 0 !important;
+  padding: 12px !important;
+  box-sizing: border-box !important;
+  border: 1px dashed rgba(21, 32, 43, 0.28) !important;
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, 0.55) !important;
+  cursor: pointer !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.create-post-section .photo-slot-label {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #15202b !important;
+  pointer-events: none !important;
+}
+
+.create-post-section .photo-slot img {
+  display: none !important;
+  width: 100% !important;
+  height: 180px !important;
+  object-fit: cover !important;
+  border-radius: 10px !important;
+}
+
+.create-post-section .photo-slot.has-photo {
+  padding: 8px !important;
+}
+
+.create-post-section .photo-slot.has-photo img {
+  display: block !important;
+}
+
+.create-post-section .photo-slot.has-photo .photo-slot-label {
+  position: absolute !important;
+  left: 16px !important;
+  bottom: 16px !important;
+  padding: 4px 8px !important;
+  border-radius: 8px !important;
+  background: rgba(244, 252, 252, 0.88) !important;
+}
+
+.create-post-section .upload-input {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  opacity: 0 !important;
+}
+
+.create-post-section .btn-upload,
+.create-post-section .upload > div,
+.create-post-section .upload-msg {
+  display: none !important;
+}
+
+mat-card.card,
+.wrapper > .card {
+  border-radius: 24px !important;
+  width: min(560px, calc(100% - 32px));
+  margin: 0 auto 24px !important;
+  box-sizing: border-box !important;
+}
+
+.card .like-dislike-btn {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+  margin: 0 !important;
+}
+
+form.card .search-from {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.form-comment {
+  opacity: 1 !important;
+  background: rgba(240, 255, 255, 0.42) !important;
+  color: #131d26 !important;
+  border: 1px solid rgba(255, 255, 255, 0.38) !important;
+  box-shadow: none !important;
+  transform: none !important;
+  flex: 0 0 auto !important;
+  box-sizing: border-box !important;
+  width: min(420px, calc(100% - 32px)) !important;
+  max-width: 420px !important;
+  margin: 16px auto 32px !important;
+  padding: 32px 28px 28px !important;
+  border-radius: 24px !important;
+}
+
+.form-comment mat-form-field {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+.form-comment .mat-form-field-wrapper {
+  padding-bottom: 0 !important;
+}
+
+.form-comment .mat-form-field-flex {
+  display: flex !important;
+  align-items: stretch !important;
+  min-height: 48px !important;
+  margin-top: 16px !important;
+  padding: 0 14px !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+  border: 1px solid rgba(255, 255, 255, 0.72) !important;
+  border-radius: 14px !important;
+  box-sizing: border-box !important;
+}
+
+.form-comment .mat-focused .mat-form-field-flex,
+.form-comment mat-form-field:focus-within .mat-form-field-flex {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-color: #3f51b5 !important;
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.16) !important;
+}
+
+.form-comment .mat-form-field-invalid .mat-form-field-flex {
+  border-color: #c62828 !important;
+}
+
+.form-comment .mat-form-field-infix {
+  width: 100% !important;
+  padding: 12px 0 !important;
+  border-top: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.form-comment .mat-form-field-label-wrapper {
+  top: -24px !important;
+  height: auto !important;
+  overflow: visible !important;
+  pointer-events: none !important;
+}
+
+.form-comment .mat-form-field-label {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  transform: none !important;
+  width: auto !important;
+  color: #15202b !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.form-comment .mat-form-field-underline,
+.form-comment .mat-form-field-ripple {
+  display: none !important;
+}
+
+.form-comment .mat-input-element {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 15px !important;
+  color: #131d26 !important;
+  caret-color: #3f51b5 !important;
+}
+
+.form-comment .mat-input-element::placeholder {
+  color: transparent !important;
+}
+
+.form-comment .mat-form-field-subscript-wrapper {
+  position: absolute !important;
+  top: auto !important;
+  bottom: 16px !important;
+  left: auto !important;
+  right: 9px !important;
+  width: auto !important;
+  height: 16px !important;
+  text-align: right !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  pointer-events: none !important;
+  font-size: 10px !important;
+}
+
+.form-comment .mat-form-field-subscript-wrapper:not(:has(mat-error)) {
+  display: none !important;
+}
+
+.form-comment mat-error {
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 8px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.01em !important;
+  color: #9f1239 !important;
+  white-space: nowrap !important;
+  text-shadow:
+    0 0 6px #fff,
+    0 0 6px #fff,
+    0 0 10px #fff,
+    0 0 14px rgba(255, 255, 255, 0.95) !important;
+}
+
+.form-comment .mat-raised-button {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  line-height: 44px !important;
+  margin: 26px 0 0 !important;
+  padding: 0 16px !important;
+  border-radius: 14px !important;
+  box-sizing: border-box !important;
+  font-family: Montserrat, sans-serif !important;
+  font-weight: 700 !important;
+  transform: none !important;
+  align-self: stretch !important;
+}
+
+.form-comment .mat-raised-button.mat-primary:not([disabled]) {
+  background: #3f51b5 !important;
+  color: #fff !important;
+}
+
+.form-comment .mat-raised-button[disabled] {
+  background: rgba(19, 29, 38, 0.14) !important;
+  color: #2c3340 !important;
+}
+
+.create-post-section mat-form-field:has(textarea) .mat-form-field-subscript-wrapper,
+.form-comment mat-form-field:has(textarea) .mat-form-field-subscript-wrapper {
+  top: auto !important;
+  bottom: 16px !important;
+}
+
+.create-post-section mat-form-field:has(mat-error) .hint,
+.form-comment mat-form-field:has(mat-error) .hint {
+  visibility: hidden !important;
+}
+
+.card .like-dislike-btn button,
+.card mat-card-actions button {
+  width: 36px !important;
+  min-width: 36px !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 14px !important;
+  transform: none !important;
+  line-height: 36px !important;
+}
+
+.card .likes,
+.card .dislikes {
+  margin: 0 0 0 2px !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  color: #15202b !important;
+}
+
+.card .likes {
+  margin-right: 14px !important;
+}
+
+.card .like-dislike-btn button.is-voted mat-icon {
+  color: #3f51b5 !important;
+}
+
+.mat-snack-bar-container {
+  background: rgba(244, 252, 252, 0.82) !important;
+  color: #15202b !important;
+  border: 1px solid rgba(255, 255, 255, 0.62) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 28px rgba(16, 24, 32, 0.2) !important;
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  font-family: Montserrat, sans-serif !important;
+  box-sizing: border-box !important;
+  padding: 14px 8px 14px 18px !important;
+  min-width: 280px !important;
+  max-width: min(420px, calc(100vw - 32px)) !important;
+}
+
+.mat-simple-snackbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
+  color: #15202b !important;
+  opacity: 1 !important;
+}
+
+.mat-simple-snackbar > span {
+  color: #15202b !important;
+}
+
+.mat-simple-snackbar-action {
+  flex-shrink: 0 !important;
+  margin: 0 0 0 8px !important;
+  color: #283593 !important;
+}
+
+.mat-simple-snackbar-action .mat-button {
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 10px !important;
+  color: #283593 !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  line-height: 32px !important;
+}
+
+app-comments .comments {
+  width: min(420px, calc(100% - 32px)) !important;
+  max-width: 420px !important;
+  margin: 0 auto 32px !important;
+  box-sizing: border-box !important;
+}
+
+app-comments .comments mat-card {
+  background: rgba(240, 255, 255, 0.42) !important;
+  color: #15202b !important;
+  border: 1px solid rgba(255, 255, 255, 0.38) !important;
+  border-radius: 18px !important;
+  box-shadow: none !important;
+  margin: 0 0 12px !important;
+  padding: 14px 16px 16px !important;
+  box-sizing: border-box !important;
+}
+
+app-comments .comments mat-card > div {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+app-comments .avatar-comments {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  margin: 0 !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  color: transparent !important;
+  font-size: 0 !important;
+}
+
+app-comments .comments mat-card-header {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+app-comments .comments mat-card-title,
+app-comments .comments mat-card-subtitle,
+app-comments .content-comments {
+  font-family: Montserrat, sans-serif !important;
+  color: #15202b !important;
+}
+
+app-comments .comments mat-card-title {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  margin: 0 !important;
+}
+
+app-comments .comments mat-card-subtitle {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #3d4a57 !important;
+  margin: 2px 0 0 !important;
+}
+
+app-comments .content-comments {
+  display: block !important;
+  margin: 12px 0 0 !important;
+  padding: 0 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
+}
+
+app-profile .action {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+app-profile .action > div,
+app-profile .action > br {
+  display: none !important;
+}
+
+app-profile .action button {
+  display: block !important;
+  width: 100% !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  padding: 0 16px !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 44px !important;
+  letter-spacing: 0.01em !important;
+}
+
+app-profile .action button.mat-primary {
+  background: #3f51b5 !important;
+  color: #fff !important;
+}
+
+app-profile .action button.mat-warn {
+  background: #c62828 !important;
+  color: #fff !important;
+}
+
+app-user-posts {
+  display: block !important;
+  text-align: left !important;
+  margin-top: 6px !important;
+}
+
+app-user-posts .post-section {
+  text-align: left !important;
+  font-size: 14px !important;
+}
+
+app-user-posts .label {
+  display: block !important;
+  margin: 18px 0 4px !important;
+  text-align: left !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #15202b !important;
+}
+
+app-user-posts .post-section > div p {
+  margin: 8px 0 0 !important;
+  text-align: left !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #3d4a57 !important;
+}
+
+app-user-posts ul {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+app-user-posts li {
+  margin: 0 !important;
+  list-style: none !important;
+  border-top: 1px solid rgba(19, 29, 38, 0.1) !important;
+}
+
+app-user-posts li > div {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 12px 0 !important;
+  box-sizing: border-box !important;
+}
+
+app-user-posts li > div > div {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  text-align: left !important;
+}
+
+app-user-posts li span,
+app-user-posts li p {
+  display: block !important;
+  text-align: left !important;
+  font-family: Montserrat, sans-serif !important;
+}
+
+app-user-posts li span {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: #15202b !important;
+}
+
+app-user-posts li p {
+  margin: 2px 0 0 !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 1.3 !important;
+  color: #3d4a57 !important;
+}
+
+mat-card.card > div:first-child {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 14px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+mat-card.card mat-card-header,
+mat-card.card .mat-card-header-text {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+mat-card.card mat-card-title,
+mat-card.card mat-card-subtitle {
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  font-family: Montserrat, sans-serif !important;
+}
+
+mat-card.card mat-card-title {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  color: #15202b !important;
+}
+
+mat-card.card mat-card-subtitle {
+  margin-top: 2px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 1.35 !important;
+  color: #3d4a57 !important;
+}
+
+mat-card.card img.avatar {
+  width: 72px !important;
+  height: 72px !important;
+  min-width: 72px !important;
+  max-width: 72px !important;
+  min-height: 72px !important;
+  max-height: 72px !important;
+  flex: 0 0 72px !important;
+  align-self: center !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 14px !important;
+}
+
+app-loader {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  z-index: 4 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  pointer-events: none !important;
+  background: transparent !important;
+}
+
+app-loader .loader {
+  margin: 0 !important;
+  font-size: 10px !important;
+  width: 1em !important;
+  height: 1em !important;
+  border-radius: 50% !important;
+  text-indent: -9999em !important;
+  animation: 1.1s infinite load5 !important;
+}
+
+app-user-posts button.mat-fab {
+  flex: 0 0 auto !important;
+  align-self: center !important;
+  width: auto !important;
+  min-width: 64px !important;
+  max-width: none !important;
+  height: 32px !important;
+  min-height: 32px !important;
+  max-height: 32px !important;
+  margin: 0 !important;
+  padding: 0 12px !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+  background: #3f51b5 !important;
+  color: #fff !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  line-height: 32px !important;
+  letter-spacing: 0.02em !important;
+}
+
+app-user-posts button.mat-fab .mat-button-wrapper {
+  display: block !important;
+  padding: 0 !important;
+  line-height: 32px !important;
+  border-radius: 0 !important;
+  color: #fff !important;
+}
