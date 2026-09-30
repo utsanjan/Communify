@@ -1,1 +1,42 @@
-node_modules
+# master branch .gitignore — Angular 9 project
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Node / npm
+node_modules/
+
+# Angular build output
+dist/
+tmp/
+out-tsc/
+
+# Angular cache
+.angular/
+
+# Firebase
+.firebase/
+firebase-debug.log
+
+# Test coverage
+coverage/
+
+# JVM crash logs (from Java tools on this machine)
+hs_err_pid*.log
+
+# Stale build artifacts at project root (from prior gh-pages operations)
+5.*.js
+main.*.js
+runtime.*.js
+polyfills.*.js
+scripts.*.js
+common.*.js
+
+# OS / IDE noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
