@@ -5,27 +5,16 @@
 </h1>
 
 <p align="center">
-  A gaming-focused social media platform — share stats, post highlights, connect with players.
+  A gaming-focused social media platform - share stats, post highlights, connect with players.
   <br/>
-  <a href="https://comm-unify.netlify.app"><strong>🔗 View Live App »</strong></a>
 </p>
 
 <p align="center">
-  <a href="https://app.netlify.com/sites/comm-unify/deploys">
-    <img src="https://api.netlify.com/api/v1/badges/cc483896-4a32-49ca-90a0-ba1bf4ae4540/deploy-status" alt="Netlify Status">
-  </a>&nbsp;
-  <a href="https://github.com/utsanjan/Communify/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/utsanjan/Communify?style=flat" alt="License">
-  </a>&nbsp;
-  <a href="https://github.com/utsanjan/Communify/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/utsanjan/Communify?style=flat" alt="Contributors">
-  </a>&nbsp;
-  <a href="https://github.com/utsanjan/Communify/stargazers">
-    <img src="https://img.shields.io/github/stars/utsanjan/Communify?style=flat" alt="Stars">
-  </a>&nbsp;
-  <a href="https://discord.gg/bvzTHWnD3n">
-    <img src="https://dcbadge.limes.pink/api/server/uavTPkr?style=flat" alt="Discord">
-  </a>
+<a href="https://app.netlify.com/sites/comm-unify/deploys"><img src="https://api.netlify.com/api/v1/badges/cc483896-4a32-49ca-90a0-ba1bf4ae4540/deploy-status" alt="Netlify Status"></a>&nbsp;
+<a href="https://github.com/utsanjan/Communify/blob/master/LICENSE"><img src="https://img.shields.io/github/license/utsanjan/Communify?style=flat" alt="License"></a>&nbsp;
+<a href="https://github.com/utsanjan/Communify/graphs/contributors"><img src="https://img.shields.io/github/contributors/utsanjan/Communify?style=flat" alt="Contributors"></a>&nbsp;  
+<a href="https://github.com/utsanjan/Communify/stargazers"><img src="https://img.shields.io/github/stars/utsanjan/Communify?style=flat" alt="Stars"></a>&nbsp;
+<a href="https://discord.gg/bvzTHWnD3n"><img src="https://dcbadge.limes.pink/api/server/uavTPkr?style=flat" alt="Discord"></a>
 </p>
 
 <br/>
@@ -34,32 +23,23 @@
   <img src="https://tinyurl.com/4m585mh2" width="100%" alt="Communify App Screenshot">
 </a>
 
----
-
 ## 📖 About
+**Communify** is a full-stack gaming social network built as a Bachelor's final year project. Players can register, create posts sharing gaming moments and stats, comment on others' posts, like/dislike content, search for other users, and manage their own profiles - all within a responsive, real-time web app.
 
-**Communify** is a full-stack gaming social network built as a Bachelor's final year project. Players can register, create posts sharing gaming moments and stats, comment on others' posts, like/dislike content, search for other users, and manage their own profiles — all within a responsive, real-time web app.
-
-> **[📑 Bachelor's Thesis PDF](https://bit.ly/3VvMBjT)** — Full project documentation and design specification.
-
----
+> **[📑 Bachelor's Thesis PDF](https://bit.ly/3VvMBjT)** - Full project documentation and design specification.
 
 ## ✨ Features
-
-- 🔐 **Authentication** — Email/password sign-up & sign-in, Google OAuth, email verification, and password reset
-- 📝 **Posts** — Create, view, like/dislike, and delete gaming posts with image uploads
-- 💬 **Comments** — Comment on any post in real-time
-- 👤 **User Profiles** — Browse all users, view individual profiles and their posts
-- 🔍 **User Search** — Live search across the user directory
-- 🛡️ **Route Guards** — Auth-protected routes; unauthenticated users are redirected automatically
-- 📱 **Mobile Gate** — Dedicated landing page for mobile visitors (desktop-only app by design)
-- 🌐 **Firebase Backend** — Firestore database, Firebase Auth, and Cloud Storage
-- ⚡ **NgRx State Management** — Centralized reactive state for auth, posts, and users
-
----
+- 🔐 **Authentication** - Email/password sign-up & sign-in, Google OAuth, email verification, and password reset
+- 📝 **Posts** - Create, view, like/dislike, and delete gaming posts with image uploads
+- 💬 **Comments** - Comment on any post in real-time
+- 👤 **User Profiles** - Browse all users, view individual profiles and their posts
+- 🔍 **User Search** - Live search across the user directory
+- 🛡️ **Route Guards** - Auth-protected routes; unauthenticated users are redirected automatically
+- 📱 **Mobile Gate** - Dedicated landing page for mobile visitors (desktop-only app by design)
+- 🌐 **Firebase Backend** - Firestore database, Firebase Auth, and Cloud Storage
+- ⚡ **NgRx State Management** - Centralized reactive state for auth, posts, and users
 
 ## 🛠️ Tech Stack
-
 | Layer | Technology |
 |---|---|
 | **Framework** | Angular 9 |
@@ -71,18 +51,13 @@
 | **Styling** | SCSS |
 | **Hosting** | Netlify |
 
----
-
 ## 🚀 Getting Started
-
 ### Prerequisites
-
 - **Node.js** `v12.x` (required for Angular 9)
-- **Angular CLI** `v9.x` — `npm install -g @angular/cli@9`
+- **Angular CLI** `v9.x` - `npm install -g @angular/cli@9`
 - A **Firebase** project with Firestore, Authentication, and Storage enabled
 
 ### Installation
-
 ```bash
 # 1. Clone the repository
 git clone https://github.com/utsanjan/Communify.git
@@ -111,10 +86,7 @@ ng build --prod
 ```
 Output is written to `dist/`. Deploy the contents to any static host (Netlify, Firebase Hosting, etc.).
 
----
-
 ## 🔒 Environment Setup
-
 Create/update `src/environments/environment.ts` with your Firebase project credentials:
 
 ```ts
@@ -133,22 +105,11 @@ export const environment = {
 
 > ⚠️ Never commit real API keys. Use environment variable injection or Firebase App Check for production.
 
----
-
 ## 👥 Project Contributors
-
 <a href="https://github.com/utsanjan/Communify/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=utsanjan/Communify" width="180" alt="Contributors">
-</a>
+<img src="https://contrib.rocks/image?repo=utsanjan/Communify" width=200>
+</a><br><br>
 
-| Name | GitHub |
-|---|---|
-| Utsanjan Maity | [@utsanjan](https://github.com/utsanjan) |
-| Partha Sarathi Bhunia | [@parthasarathi04](https://github.com/parthasarathi04) |
-| Abhik Khatuya | [@ABHIK-KHATUYA](https://github.com/ABHIK-KHATUYA) |
-
----
-
-## 📄 License
-
-This project is licensed under the terms of the [LICENSE](./LICENSE) file included in this repository.
+- [Partha Sarathi Bhunia](https://github.com/parthasarathi04)
+- [Utsanjan Maity](https://github.com/utsanjan)
+- [Abhik Khatuya](https://github.com/ABHIK-KHATUYA)
