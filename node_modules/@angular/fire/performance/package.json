@@ -1,8 +1,0 @@
-{
-  "name": "@angular/fire/performance",
-  "main": "../bundles/performance.umd.js",
-  "module": "index.js",
-  "es2015": "./es2015/index.js",
-  "typings": "index.d.ts",
-  "sideEffects": false
-}

@@ -1,0 +1,19 @@
+# gh-pages branch .gitignore
+# ─────────────────────────────────────────────────────────────────────────────
+# Node / build tooling (not part of the published site)
+node_modules/
+
+# Java / Maven build output (talkE backend lives on master, not here)
+talkE/target/
+talkE/.DS_Store
+
+# Older build artifacts (superseded builds)
+social-network-app/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
