@@ -5,9 +5,13 @@
 # Node / build tooling (not part of the published site)
 node_modules/
 
-# Local build output directories (use _misc/build-artifacts/ for committed builds)
-dist/
-angularapp/
+# Loose build output at root (use _misc/build-artifacts/ for archived builds)
+/dist/
+/angularapp/
+
+# Exceptions: builds archived inside _misc/ ARE tracked
+!_misc/build-artifacts/dist/
+!_misc/build-artifacts/angularapp/
 
 # OS noise
 .DS_Store
@@ -16,6 +20,5 @@ Thumbs.db
 ehthumbs.db
 
 # Editor / IDE config (deployment branch only — no dev tools needed here)
-.cursor/
-.vscode/
+/vscode/
 .idea/
