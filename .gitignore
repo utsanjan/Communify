@@ -1,39 +1,29 @@
-# master branch .gitignore — Angular 9 project
+# master branch .gitignore — Angular 9 / Communify project
 # ─────────────────────────────────────────────────────────────────────────────
 
-# Node / npm
+# ── Node / npm ────────────────────────────────────────────────────────────────
 node_modules/
 
-# Angular build output
-dist/
-tmp/
+# ── Angular CLI build output (use _misc/build-artifacts/ for committed builds) ─
 out-tsc/
 
-# Angular cache
+# ── Angular cache ─────────────────────────────────────────────────────────────
 .angular/
 
-# Firebase
-.firebase/
+# ── Firebase hosting / emulator ───────────────────────────────────────────────
 firebase-debug.log
+.runtimeconfig.json
 
-# Test coverage
+# ── Test coverage ─────────────────────────────────────────────────────────────
 coverage/
 
-# JVM crash logs (from Java tools on this machine)
-hs_err_pid*.log
-
-# Stale build artifacts at project root (from prior gh-pages operations)
-5.*.js
-main.*.js
-runtime.*.js
-polyfills.*.js
-scripts.*.js
-common.*.js
-
-# OS / IDE noise
+# ── OS / metadata ─────────────────────────────────────────────────────────────
 .DS_Store
+**/.DS_Store
 Thumbs.db
-.vscode/
+ehthumbs.db
+
+# ── Editor / IDE ─────────────────────────────────────────────────────────────
 .idea/
 *.suo
 *.ntvs*
