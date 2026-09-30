@@ -73,37 +73,6 @@
 
 ---
 
-## 🗂️ Project Structure
-
-```
-src/app/
-├── core/                   # Singleton services, layout shell (navbar, footer, home)
-│   ├── components/         # NavbarComponent, FooterComponent, SidenavListComponent, etc.
-│   ├── firebase/           # FirebaseModule — AngularFire provider setup
-│   └── services/           # SpinnerService
-├── shared/                 # Reusable cross-feature declarations
-│   ├── components/loader/  # LoaderComponent (global spinner)
-│   ├── directives/         # PasswordMatchDirective
-│   ├── guards/             # AuthGuard, SecureInnerGuard
-│   ├── interfaces/         # IPost, IUser, IComment
-│   ├── material/           # MaterialModule — all Angular Material re-exports
-│   ├── pipes/              # SubstringPipe, ToDatePipe
-│   └── validators/         # Password match validator
-├── store/                  # NgRx global store
-│   ├── auth/               # auth.actions / auth.effects / auth.reducer / auth.selectors
-│   ├── posts/              # posts.actions / posts.effects / posts.reducer / posts.selectors
-│   ├── users/              # users.actions / users.effects / users.reducer / users.selectors
-│   └── store.types.ts      # Shared IAction<T> interface
-├── auth/                   # Auth feature module (sign-in, sign-up, verify-email, forgot-password)
-├── posts/                  # Posts feature module (list, detail, create, card, comments)
-│   └── models/             # Upload model
-├── users/                  # Users feature module (list, profile, user-posts)
-│   └── resolvers/          # UserResolver
-└── app.module.ts           # Root module
-```
-
----
-
 ## 🚀 Getting Started
 
 ### Prerequisites
