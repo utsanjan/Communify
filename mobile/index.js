@@ -1,14 +1,9 @@
-const containerEl = document.querySelector(".container");
-const btnEl = document.querySelector(".btn");
-const popupContainerEl = document.querySelector(".popup-container");
-const closeIconEl = document.querySelector(".close-icon");
-const preloader = document.querySelector(".preloader");
-const preloaderDuration = 400;
-containerEl.classList.add("active");
-popupContainerEl.classList.remove("active");
-const hidePreloader = () => {
-  setTimeout(() => {
-      preloader.classList.add("hide");
-  }, preloaderDuration);
+var preloader = document.querySelector(".preloader");
+
+function hidePreloader() {
+  if (!preloader) return;
+  preloader.classList.add("hide");
 }
+
 window.addEventListener("load", hidePreloader);
+setTimeout(hidePreloader, 2500);

@@ -1,150 +1,119 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  background-color: #0E1024;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #0d101e;
+  color: #f4f7fb;
+  font-family: Montserrat, Raleway, sans-serif;
 }
 
-h1 {
-  font-size: 60px;
-  color: white;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  letter-spacing: 4px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+.mobile-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(63, 81, 181, 0.45), transparent 42%),
+    radial-gradient(circle at 82% 18%, rgba(198, 40, 40, 0.35), transparent 40%),
+    radial-gradient(circle at 70% 78%, rgba(46, 125, 50, 0.32), transparent 38%),
+    radial-gradient(circle at 12% 82%, rgba(255, 193, 7, 0.22), transparent 36%),
+    #0d101e;
+  filter: blur(0);
 }
 
-h4 {
-  font-size: 8mm;
-  margin: 0 auto auto 0;
-  font-family: sans-serif;
-  color: #292A2D;
-  text-align: left;
-}
-
-label {
-  color: #292A2D;
-  font-family: sans-serif;
-}
-
-.container {
+.mobile-shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
   justify-content: center;
-  background-size: cover;
-  text-align: center;
-  transition: filter 0.7s;
-  border: none;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  padding: 32px 20px 40px;
+  gap: 28px;
 }
 
-.btn {
-  padding: 10px 20px;
-  width: 200px;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  border-radius: 5px;
-  font-size: 20px;
-}
-
-.btn:hover {
-  filter: brightness(0.8);
-}
-
-.active.container {
-  filter: blur(15px) brightness(0.6);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-}
-
-.popup-container {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  width: 70mm;
-  height: 65mm;
-  top: 30%;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  background-color: #FAFDFF;
-  box-shadow:
-  inset 0px 5px 5px 0px #1e101f1f,
-  inset 0px -5px 5px 0px rgba(38, 171, 63, 0.1);
-  background-size: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  opacity: 60%;
-  transition: all 0.7s;
-  overflow: hidden;
-}
-
-.back {
-  width: 100%;
-  height: 100%;
-  border: none;
-  overflow: hidden;
-}
-
-.input {
-  border: 2px solid;
-  padding: 10px;
-  margin: 10px 0;
-  font-size: 20px;
+.brand {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #fff;
   text-align: center;
 }
 
-.input::placeholder {
-  color: lightgray;
+.mobile-card {
+  width: min(420px, calc(100% - 32px));
+  margin: 0;
+  padding: 32px 28px 28px;
+  border-radius: 24px;
+  background: rgba(240, 255, 255, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  color: #131d26;
+  text-align: center;
+  backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  box-shadow: none;
 }
 
-.close-icon {
-  position: absolute;
-  right: 20px;
-  cursor: pointer;
+.mobile-card h1 {
+  margin: 0 0 16px;
+  font-family: Montserrat, sans-serif;
+  font-size: clamp(1.35rem, 5vw, 1.75rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: #131d26;
+  letter-spacing: 0.02em;
 }
 
-.close-icon:hover {
-  color: transparent;
+.mobile-card p {
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #3d4a57;
 }
 
-.active.popup-container {
-  visibility: hidden;
-  opacity: 0;
-  top: 10%;
+.mobile-card strong {
+  font-weight: 700;
+  color: #15202b;
 }
 
 .preloader {
   position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: #0D0121;
-  left: 0;
-  top: 0;
+  inset: 0;
+  z-index: 10;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all 400ms;
-  z-index: 29000;
+  background: #0d101e;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .preloader.hide {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
-.preloader .preloader-text {
-  color: #838383;
-  text-transform: uppercase;
-  letter-spacing: 8px;
-  font-size: 15px;
+.loader {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid rgba(244, 247, 251, 0.15);
+  border-top-color: #3f51b5;
+  animation: mobile-spin 1.1s linear infinite;
 }
 
-.preloader .dots-container {
-  display: flex;
-  margin-bottom: 48px;
+@keyframes mobile-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <script type="text/javascript">
@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.57a8be075e2ea3a6ddaf.css">
-<link rel="stylesheet" href="assets/css/polish.css?v=75"></head>
+<link rel="stylesheet" href="assets/css/polish.css?v=85"></head>
 <body>
 <app-root></app-root>
 <script src="assets/js/runtime.e7c2a1b08d4f69315e20.js" defer></script><script src="assets/js/polyfills.620d64c306e4a7c463f2.js" defer></script>
@@ -27,7 +27,11 @@
       if (key !== "user" || value !== "logged") return;
       var path = location.pathname.replace(/\/+$/, "") || "/";
       if (path === "/" || path === "/home" || path.indexOf("/auth/") === 0) {
-        location.assign("/post/list");
+        var target = "/post/list";
+        history.pushState({}, "", target);
+        window.dispatchEvent(new PopStateEvent("popstate"));
+        syncHomeNav();
+        syncNav();
       }
     }
     localStorage.setItem = function (key, value) {
@@ -117,22 +121,56 @@
     syncHomeNav();
     syncNav();
 
-    var avatarFallback = "data:image/svg+xml," + encodeURIComponent(
-      "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'>" +
-      "<defs><clipPath id='cfav'><circle cx='20' cy='20' r='20'/></clipPath></defs>" +
-      "<g clip-path='url(#cfav)'>" +
-      "<rect width='40' height='40' fill='#e8eef8'/>" +
-      "<circle cx='20' cy='16' r='6' fill='#3f51b5'/>" +
-      "<path d='M8 34c2.2-6 6.4-9 12-9s9.8 3 12 9V48H8Z' fill='#3f51b5'/>" +
-      "</g></svg>"
-    );
-    document.addEventListener("error", function (event) {
-      var img = event.target;
-      if (!img || !img.classList || !img.classList.contains("avatar-comments")) return;
-      if (img.getAttribute("data-fallback") === "1") return;
+    var avatarFallback = "assets/images/default-avatar.png";
+    function useAvatarPlaceholder(img) {
+      img.classList.remove("cf-avatar-placeholder");
       img.setAttribute("data-fallback", "1");
       img.alt = "";
       img.src = avatarFallback;
+    }
+    function isMissingAvatarSrc(src) {
+      var value = (src || "").trim();
+      return !value || value === "null" || value === "undefined";
+    }
+
+    function needsAvatarFallback(img) {
+      if (!img || !img.classList) return false;
+      if (img.classList.contains("avatar-comments")) return true;
+      if (img.classList.contains("avatar")) return true;
+      return false;
+    }
+
+    function applyAvatarFallback(img) {
+      if (!needsAvatarFallback(img)) return;
+      var src = img.getAttribute("src") || "";
+      if (
+        img.getAttribute("data-fallback") === "1" &&
+        src.indexOf("default-avatar.png") !== -1
+      ) {
+        return;
+      }
+      if (
+        isMissingAvatarSrc(src) ||
+        src.indexOf("angularapp/assets/images/def.jpg") !== -1 ||
+        src.indexOf("data:image/svg+xml") === 0 ||
+        img.classList.contains("cf-avatar-placeholder") ||
+        (img.getAttribute("data-fallback") === "1" &&
+          src.indexOf("default-avatar.png") === -1)
+      ) {
+        useAvatarPlaceholder(img);
+      }
+    }
+
+    function paintUserAvatars() {
+      var imgs = document.querySelectorAll("img.avatar, img.avatar-comments");
+      for (var i = 0; i < imgs.length; i++) applyAvatarFallback(imgs[i]);
+    }
+
+    document.addEventListener("error", function (event) {
+      var img = event.target;
+      if (!needsAvatarFallback(img)) return;
+      if (img.getAttribute("data-fallback") === "1") return;
+      useAvatarPlaceholder(img);
     }, true);
 
     function setShareLabel(text) {
@@ -308,10 +346,12 @@
       enhanceSharePost();
       showUploadAlert();
       paintVoteButtons();
+      paintUserAvatars();
       syncNav();
     });
     shareObserver.observe(document.documentElement, { childList: true, subtree: true });
     enhanceSharePost();
+    paintUserAvatars();
   })();
 </script>
 </body>

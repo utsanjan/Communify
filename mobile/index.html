@@ -2,27 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Communify</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="preloader">
-      <div class="dots-container">
-          <img src="../assets/images/load.gif" width="400px"/>
-      </div>
-  </div>
-    <div class="container">
-      <img class="back" src="https://tinyurl.com/4m585mh2"/>
-      <button class="btn"></button>
+    <div class="preloader" aria-hidden="true">
+      <div class="loader" role="status" aria-label="Loading"></div>
     </div>
-    <div class="popup-container active">
-      <h4>This page is intended for PC gamers only. Please view it on a desktop.</h4>
-      <a class="github-button" href="https://github.com/utsanjan" data-color-scheme="no-preference: light;
-      light: light; dark: dark;" data-size="large" aria-label="Follow @utsanjan on GitHub">Follow @utsanjan</a>
-    </div>
+    <div class="mobile-bg" aria-hidden="true"></div>
+    <main class="mobile-shell">
+      <p class="brand">COMMUNIFY</p>
+      <section class="mobile-card" aria-labelledby="mobile-title">
+        <h1 id="mobile-title">Desktop only</h1>
+        <p>
+          Communify is built for PC gamers. Please open
+          <strong>comm-unify.netlify.app</strong> on a desktop or laptop for
+          the full experience.
+        </p>
+      </section>
+    </main>
     <script src="index.js"></script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>

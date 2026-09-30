@@ -178,23 +178,6 @@ mat-toolbar.navbar .welcome-msg {
   color: rgba(244, 247, 251, 0.7) !important;
 }
 
-html:not(.page-home) mat-sidenav-content.site > .main {
-  padding-top: 32px !important;
-  box-sizing: border-box !important;
-}
-
-app-all-posts app-card > h1,
-app-all-posts app-card > br {
-  display: none !important;
-  margin: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-}
-
-app-all-posts app-card > mat-card.card {
-  margin-top: 0 !important;
-}
-
 app-footer section {
   height: auto !important;
   overflow: visible !important;
@@ -234,7 +217,7 @@ mat-card.card,
   box-sizing: border-box !important;
   width: min(420px, calc(100% - 32px)) !important;
   max-width: 420px !important;
-  margin: 0 auto 40px !important;
+  margin: 32px auto 40px !important;
   padding: 32px 28px 28px !important;
   border-radius: 24px !important;
 }
@@ -677,28 +660,6 @@ mat-card.card,
   box-sizing: border-box !important;
 }
 
-app-users-list form.card,
-app-users-list .wrapper > .card,
-app-profile .wrapper > .card,
-app-verify-email .card,
-app-not-found .wrapper {
-  margin-top: 0 !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-app-users-list form.card {
-  margin-bottom: 24px !important;
-}
-
-app-users-list .wrapper > .card {
-  margin-bottom: 24px !important;
-}
-
-app-profile .wrapper > .card {
-  margin-bottom: 24px !important;
-}
-
 .card .like-dislike-btn {
   display: flex !important;
   align-items: center !important;
@@ -993,12 +954,8 @@ app-comments .avatar-comments {
   width: 40px !important;
   height: 40px !important;
   min-width: 40px !important;
-  max-width: 40px !important;
-  min-height: 40px !important;
-  max-height: 40px !important;
-  border-radius: 8px !important;
+  border-radius: 50% !important;
   object-fit: cover !important;
-  object-position: center !important;
   margin: 0 !important;
   background: rgba(255, 255, 255, 0.72) !important;
   color: transparent !important;
@@ -1224,33 +1181,6 @@ mat-card.card img.avatar {
   object-fit: cover !important;
   object-position: center !important;
   border-radius: 14px !important;
-}
-
-mat-card.card img.avatar[data-fallback="1"] {
-  display: block !important;
-  object-fit: cover !important;
-  border-radius: 14px !important;
-}
-
-app-users-list .img-section {
-  display: flex !important;
-  justify-content: center !important;
-  width: 100% !important;
-}
-
-app-users-list img.avatar {
-  width: 96px !important;
-  height: 96px !important;
-  min-width: 96px !important;
-  max-width: 96px !important;
-  min-height: 96px !important;
-  max-height: 96px !important;
-  margin: 0 !important;
-  transform: none !important;
-  display: block !important;
-  object-fit: cover !important;
-  object-position: center !important;
-  border-radius: 15px !important;
 }
 
 app-loader {
