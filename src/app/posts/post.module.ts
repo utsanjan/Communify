@@ -4,7 +4,7 @@ import { ListComponent } from "./list/list.component";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
-import { MaterialModule } from "../material/material.module";
+import { MaterialModule } from "../shared/material/material.module";
 import { SharedModule } from "../shared/shared.module";
 import { RouterModule } from "@angular/router";
 import { DetailComponent } from "./detail/detail.component";

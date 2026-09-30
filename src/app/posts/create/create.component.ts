@@ -1,14 +1,14 @@
 import { Component, OnInit } from "@angular/core";
 import { UploadService } from "../services/upload.service";
-import { Upload } from "../../shared/models/file";
+import { Upload } from "../models/upload.model";
 import { PostService } from "../services/post.service";
 import { IPost } from "../../shared/interfaces/post";
 import { MatSnackBar } from "@angular/material";
 import { AuthService } from "../../auth/services/auth.service";
 import { IUser } from "../../shared/interfaces/user";
-import { IAppState } from "src/app/+store";
+import { IAppState } from "src/app/store";
 import { Store } from "@ngrx/store";
-import { CreatePost } from "src/app/+store/posts/actions";
+import { CreatePost } from "src/app/store/posts/posts.actions";
 
 @Component({
   selector: "app-create-post",

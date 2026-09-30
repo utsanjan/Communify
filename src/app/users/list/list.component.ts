@@ -1,13 +1,13 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
+﻿import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Observable, Subscription } from "rxjs";
 import { IUser } from "../../shared/interfaces/user";
 import {
   IAppState,
   getAllUsersSelector,
   getFoundUsersSelector
-} from "../../+store";
+} from "../../store";
 import { Store } from "@ngrx/store";
-import { AllUsers, SearchUser } from "../../+store/users/actions";
+import { AllUsers, SearchUser } from "../../store/users/users.actions";
 
 @Component({
   selector: "app-users-list",

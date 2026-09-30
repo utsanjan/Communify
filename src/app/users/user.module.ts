@@ -3,7 +3,7 @@ import { CommonModule } from "@angular/common";
 import { ProfileComponent } from "./profile/profile.component";
 import { ListComponent } from "./list/list.component";
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { MaterialModule } from "../material/material.module";
+import { MaterialModule } from "../shared/material/material.module";
 import { SharedModule } from "../shared/shared.module";
 import { RouterModule } from "@angular/router";
 import { UserRoutingModule } from "./user-routing.module";

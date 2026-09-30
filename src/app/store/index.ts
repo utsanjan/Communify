@@ -1,13 +1,13 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
 
-import {reducer as AuthReducer, IAuthState} from "./auth/reducer"
-import * as auth from "./auth/selectors"
+import { reducer as AuthReducer, IAuthState } from "./auth/auth.reducer";
+import * as auth from "./auth/auth.selectors";
 
-import { reducer as PostReducer, IPostsState } from "./posts/reducer";
-import * as post from "./posts/selectors";
+import { reducer as PostReducer, IPostsState } from "./posts/posts.reducer";
+import * as post from "./posts/posts.selectors";
 
-import { reducer as UserReducer, IUserState } from "./users/reducer";
-import * as user from "./users/selectors";
+import { reducer as UserReducer, IUserState } from "./users/users.reducer";
+import * as user from "./users/users.selectors";
 
 export const reducers = {
   auth: AuthReducer,
@@ -34,5 +34,5 @@ export const getCurrentUserSelector = createSelector(getUserStoreSelector, user.
 export const getFoundUsersSelector = createSelector(getUserStoreSelector, user.foundUsers);
 
 /* Auth selectors */
-export const getAuthStoreSelector = createFeatureSelector("auth")
+export const getAuthStoreSelector = createFeatureSelector("auth");
 export const getUserInfoSelector = createSelector(getAuthStoreSelector, auth.getLoggedUserInfo);

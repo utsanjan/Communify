@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { HomeComponent } from "./home/home.component";
-import { MaterialModule } from "../material/material.module";
+import { MaterialModule } from "../shared/material/material.module";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { AuthModule } from "../auth/auth.module";
 import { SharedModule } from "../shared/shared.module";

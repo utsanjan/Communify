@@ -4,7 +4,7 @@ import {
   ActionTypes,
   AllUsersSuccess,
   SearchUserSuccess
-} from "./actions";
+} from "./users.actions";
 
 export interface IUserState {
   userList: IUser[];

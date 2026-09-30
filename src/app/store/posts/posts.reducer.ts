@@ -1,4 +1,4 @@
-import { IPost } from "src/app/shared/interfaces/post";
+import { IPost } from "../../shared/interfaces/post";
 import {
   Actions,
   ActionTypes,
@@ -7,8 +7,8 @@ import {
   AddComment,
   CreatePost,
   DeletePost
-} from "./actions";
-import { IComment } from "src/app/shared/interfaces/comment";
+} from "./posts.actions";
+import { IComment } from "../../shared/interfaces/comment";
 
 export interface IPostsState {
   postList: IPost[];

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+﻿import { Component, OnInit, Input } from "@angular/core";
 import { IComment } from "../../shared/interfaces/comment";
 import { IPost } from "../../shared/interfaces/post";
 import { AuthService } from "../../auth/services/auth.service";
@@ -6,8 +6,8 @@ import { Observable } from "rxjs";
 import { DocumentData } from "@angular/fire/firestore";
 import { NgForm } from "@angular/forms";
 import { Store } from "@ngrx/store";
-import { IAppState, getCommentsSelector } from "src/app/+store";
-import { PostComments, AddComment } from "../../+store/posts/actions";
+import { IAppState, getCommentsSelector } from "src/app/store";
+import { PostComments, AddComment } from "../../store/posts/posts.actions";
 import { ActivatedRoute } from "@angular/router";
 
 @Component({

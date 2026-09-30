@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+﻿import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { Observable } from "rxjs";
 import { IUser } from "../../shared/interfaces/user";
-import { IAppState, getCurrentUserSelector } from "src/app/+store";
+import { IAppState, getCurrentUserSelector } from "src/app/store";
 import { Store } from "@ngrx/store";
-import { CurrentUser, DeleteUser } from "../../+store/users/actions";
+import { CurrentUser, DeleteUser } from "../../store/users/users.actions";
 
 @Component({
   selector: "app-profile",

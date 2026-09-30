@@ -1,4 +1,4 @@
-import { IPostsState } from './reducer';
+import { IPostsState } from './posts.reducer';
 
 export const getAllPosts = (state: IPostsState) => state.postList
 export const getPostDetail = (state: IPostsState) => state.postDetail.post

@@ -1,4 +1,4 @@
-import { IUserState } from "./reducer";
+import { IUserState } from "./users.reducer";
 
 export const getAllUsers = (state: IUserState) => state.userList;
 export const getCurrentUser = (state: IUserState) => state.currentUser;

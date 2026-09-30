@@ -18,9 +18,9 @@ import {
   AuthLoginWithProvider,
   AuthLoginWithProviderFailed,
   AuthLoginWithProviderSuccess
-} from "./actions";
+} from "./auth.actions";
 import { map, switchMap, tap } from "rxjs/operators";
-import { AuthService } from "src/app/auth/services/auth.service";
+import { AuthService } from "../../auth/services/auth.service";
 import { MatSnackBar } from "@angular/material";
 import { Router } from "@angular/router";
 

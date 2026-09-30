@@ -1,9 +1,9 @@
-import { Component } from "@angular/core";
+﻿import { Component } from "@angular/core";
 import { AuthService } from "src/app/auth/services/auth.service";
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { IAppState } from 'src/app/+store';
-import { SendVerificationMail } from 'src/app/+store/auth/actions';
+import { IAppState } from 'src/app/store';
+import { SendVerificationMail } from 'src/app/store/auth/auth.actions';
 
 @Component({
   selector: "app-verify-email",

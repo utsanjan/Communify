@@ -1,4 +1,4 @@
-import { IAction } from "../../shared/interfaces/action";
+import { IAction } from "../store.types";
 
 export const ActionTypes = {
   SignUp: "[AUTH] SignUp",

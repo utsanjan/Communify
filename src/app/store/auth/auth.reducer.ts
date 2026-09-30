@@ -1,5 +1,5 @@
-import { ActionTypes, SignUpSuccess, SignInSuccess, InitializeUserSuccess } from "./actions";
-import { Actions } from "./actions";
+import { ActionTypes, SignUpSuccess, SignInSuccess, InitializeUserSuccess } from "./auth.actions";
+import { Actions } from "./auth.actions";
 
 export interface IAuthState {
   afUserInfo: any;

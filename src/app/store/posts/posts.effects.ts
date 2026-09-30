@@ -22,10 +22,10 @@ import {
   CreatePostSuccess,
   AddCommentSuccess,
   LikeDislikePostSuccess
-} from "./actions";
+} from "./posts.actions";
 import { switchMap, map, catchError, tap } from "rxjs/operators";
-import { PostService } from "src/app/posts/services/post.service";
-import { IPost } from "src/app/shared/interfaces/post";
+import { PostService } from "../../posts/services/post.service";
+import { IPost } from "../../shared/interfaces/post";
 import { Router } from "@angular/router";
 
 @Injectable({

@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+﻿import { Component, OnInit } from "@angular/core";
 import { IPost } from "../../shared/interfaces/post";
 import { ActivatedRoute } from "@angular/router";
 import { Observable } from "rxjs";
-import { IAppState, getPostDetailSelector } from "src/app/+store";
+import { IAppState, getPostDetailSelector } from "src/app/store";
 import { Store } from "@ngrx/store";
-import { PostDetail } from "src/app/+store/posts/actions";
+import { PostDetail } from "src/app/store/posts/posts.actions";
 
 @Component({
   selector: "app-details",

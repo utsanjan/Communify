@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+﻿import { Injectable } from "@angular/core";
 import { IUser } from "../../shared/interfaces/user";
 import { auth } from "firebase/app";
 import { AngularFireAuth } from "@angular/fire/auth";
@@ -11,9 +11,9 @@ import {
   InitializeUser,
   SignOut,
   AuthLoginWithProvider
-} from "src/app/+store/auth/actions";
+} from "src/app/store/auth/auth.actions";
 import { Store } from "@ngrx/store";
-import { IAppState, getUserInfoSelector } from "src/app/+store";
+import { IAppState, getUserInfoSelector } from "src/app/store";
 
 @Injectable({
   providedIn: "root"

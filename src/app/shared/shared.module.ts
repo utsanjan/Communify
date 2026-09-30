@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
-import { LoaderComponent } from "./loader/loader.component";
+import { LoaderComponent } from "./components/loader/loader.component";
 import { PasswordMatchDirective } from "./directives/password-match.directive";
 import { SubstringPipe } from "./pipes/substring.pipe";
 import { ToDatePipe } from './pipes/toDate.pipe';

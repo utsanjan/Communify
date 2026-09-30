@@ -1,8 +1,8 @@
-import { Component } from "@angular/core";
+﻿import { Component } from "@angular/core";
 import { AuthService } from "./auth/services/auth.service";
 import { Store } from "@ngrx/store";
-import { IAppState } from "./+store";
-import { InitializeUser } from "./+store/auth/actions";
+import { IAppState } from "./store";
+import { InitializeUser } from "./store/auth/auth.actions";
 
 @Component({
   selector: "app-root",

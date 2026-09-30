@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Actions, Effect, ofType } from "@ngrx/effects";
-import { UsersService } from "src/app/users/services/users.service";
+import { UsersService } from "../../users/services/users.service";
 import {
   ActionTypes,
   AllUsersSuccess,
@@ -12,9 +12,9 @@ import {
   SearchUser,
   SearchUserSuccess,
   SearchUserFailed
-} from "./actions";
+} from "./users.actions";
 import {  map, switchMap, catchError } from "rxjs/operators";
-import { IUser } from "src/app/shared/interfaces/user";
+import { IUser } from "../../shared/interfaces/user";
 import { Router } from '@angular/router';
 
 @Injectable({

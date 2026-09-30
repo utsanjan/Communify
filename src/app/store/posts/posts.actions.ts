@@ -1,5 +1,5 @@
 import { IPost } from "../../shared/interfaces/post";
-import { IAction } from "../../shared/interfaces/action";
+import { IAction } from "../store.types";
 import { IComment } from "../../shared/interfaces/comment";
 
 export const ActionTypes = {

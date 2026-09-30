@@ -1,5 +1,5 @@
-import { IAction } from "src/app/shared/interfaces/action";
-import { IUser } from "src/app/shared/interfaces/user";
+import { IAction } from "../store.types";
+import { IUser } from "../../shared/interfaces/user";
 
 export const ActionTypes = {
   GetAllUsers: "[USER] Get All Users",

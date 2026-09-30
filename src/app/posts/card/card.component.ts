@@ -1,11 +1,11 @@
-import { Component, Input, ViewChild, ElementRef } from "@angular/core";
+﻿import { Component, Input, ViewChild, ElementRef } from "@angular/core";
 import { IPost } from "../../shared/interfaces/post";
 import { Router, ActivatedRoute } from "@angular/router";
 import { IUser } from "../../shared/interfaces/user";
 import { AuthService } from "../../auth/services/auth.service";
 import { Store } from "@ngrx/store";
-import { IAppState } from "src/app/+store";
-import { LikeDislikePost, DeletePost } from "src/app/+store/posts/actions";
+import { IAppState } from "src/app/store";
+import { LikeDislikePost, DeletePost } from "src/app/store/posts/posts.actions";
 
 @Component({
   selector: "app-card",
