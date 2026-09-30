@@ -1,0 +1,64 @@
+---
+description: How Communify works, and where live-site edits belong
+alwaysApply: true
+---
+
+# Communify
+
+Gaming social app (bachelor project). This workspace is the **gh-pages** branch. Netlify auto-publishes it to https://comm-unify.netlify.app (production commit is the tip of `gh-pages`).
+
+## Where to change things
+
+- This checkout is the **compiled static site**, not the Angular source. Human-editable files here: `index.html`, `404.html`, `mobile/`, `assets/`, `social-network-app/`.
+- App logic lives on **master** under `src/`. Feature work belongs there, then a production build is committed to `gh-pages`. Do not implement features by editing `main.*.js`.
+- `index.html` is the live entry (`<base href="https://comm-unify.netlify.app/">`). Screens ≤700px redirect to `/mobile/`, a desktop-only interstitial.
+- `404.html` and `social-network-app/index.html` still use `<base href="https://utsanjan.github.io/Communify/">`. `social-network-app/` is an older build (different bundle hashes). Root `index.html` + `main.966baf5bb8fd0e9d72c9.js` is the current Netlify app.
+- GitHub Pages https://utsanjan.github.io/Communify/ is Jekyll of **master** `README.md`, not this app.
+- `server.js` on master serves `angularapp/` via Express (port `PORT` or 8080). `postinstall` runs `ng build --output-path angularapp --aot --prod`.
+- `master` `package.json` has unresolved merge-conflict markers around bootstrap/express/firebase versions.
+- Firebase Hosting config (`firebase.json`, project `greenhouse-e7063`, site `comm-unify`) does not match this Netlify publish. The GitHub Action deploys on push to `gh-pages`.
+- `talkE/` on master is a separate Java chat app. It is not part of the live Angular site.
+
+## Stack
+
+Angular 9 SPA (`social-network-app`), Angular Material, Flex Layout, NgRx 8 (`@ngrx/store` + effects), `@angular/fire` 5 / Firebase 7. Backend is Firebase only: Auth, Firestore, Storage. Config is in `src/environments/environment.ts` and `environment.prod.ts`. Project id: `greenhouse-e7063`.
+
+## Routes
+
+Defined in `src/app/app-routing.module.ts`, `auth/auth-routing.module.ts`, `posts/post-routing.module.ts`, `users/user-routing.module.ts`.
+
+- `/` → `/home`. Landing (`HomeComponent`): video background, “Joined Already” → `/auth/sign-in`, “Get Started” → `/auth/signup`.
+- `/auth/sign-in`, `/auth/signup`, `/auth/forgot-password`, `/auth/verify-email-address`.
+- `/post/list`, `/post/create`, `/post/:id` (lazy `PostModule`).
+- `/user/list`, `/user/:id` profile (lazy `UserModule`).
+- anything else → `NotFoundComponent`.
+
+`SecureInnerGuard` blocks `/home`, sign-in, and signup when `localStorage.user` is set, and sends the user to `/post/list`. `AuthGuard` blocks post and user routes when that key is missing, and sends the user to `/auth/sign-in`. The guard checks the string `"logged"`, not a Firebase token.
+
+Navbar and sidenav: logged out → Home, Login, Register. Logged in → My Profile (`/user/:id`), All Users, All Posts, Share/Create Post, Logout.
+
+## Auth flow
+
+UI dispatches NgRx actions. `AuthEffects` call `AuthService`.
+
+- Sign up: `createUserWithEmailAndPassword`, set `localStorage.user = "logged"`, write `users/{uid}`, send verification email, go to verify-email.
+- Sign in: email/password, then if `emailVerified` merge `{ emailVerified: true }` on the user doc, set localStorage, go to `/post/list`, `InitializeUser`.
+- Google: popup, `setUserData`, localStorage, `/post/list`.
+- Forgot password: Firebase reset email.
+- Logout: Firebase sign-out, remove localStorage, go to `/`.
+- Startup: `InitializeUser` reads `authState`, then Firestore `users/{uid}`, into the auth store. `AppComponent` waits until `userData !== undefined` before rendering the shell.
+- Delete account: `currentUser.delete()` plus delete the Firestore user doc.
+
+User doc: `{ id, email, emailVerified, name, avatar }`. Avatar falls back to the Google photo URL.
+
+## Posts and users
+
+Firestore `posts` ordered by `createdOn` desc. Post: `{ id, title, description, createdOn, likes, dislikes, imgName, imageLink, createdByName, createdById, avatar }`. Ids are `Math.random().toString()`. Comments are `posts/{id}/comments` with the same style of id.
+
+Create: file must be uploaded first to Storage `/uploads/{filename}` (`UploadService`), then `CreatePost` writes the post and fills `imageLink` from the download URL, then navigates to `/post/list`. Delete removes the Firestore doc and the storage file. Likes/dislikes are plain counters (`updateLikeDislike`); the query filters `createdById == postId` and then updates doc `postId`, so the counter update is unreliable. List/detail/comments go through `PostEffects`.
+
+Users: `getAllUsers` / `getUser` attach that user's posts (`createdById`). Search is in-memory on the loaded list, by a user field or by post `title`. The users effect emits `AllUsersSuccess` once per user (`mergeMap`), not as one array.
+
+## UI shell
+
+`app.component`: sidenav + navbar + `router-outlet` + footer. Spinner/loader assets are `assets/images/load.gif` and `assets/videos/back.mp4`.
