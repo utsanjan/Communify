@@ -19,7 +19,7 @@ import {
   AuthLoginWithProviderFailed,
   AuthLoginWithProviderSuccess
 } from "./auth.actions";
-import { map, switchMap, tap } from "rxjs/operators";
+import { map, switchMap, tap, filter } from "rxjs/operators";
 import { AuthService } from "../../auth/services/auth.service";
 import { MatSnackBar } from "@angular/material";
 import { Router } from "@angular/router";
@@ -61,7 +61,7 @@ export class AuthEffects {
         .signIn({ email, password })
         .then(userCredential => {
           localStorage.setItem("user", "logged");
-          this.router.navigate(["post", "list"]);
+          // Navigation is handled by InitializeUserSuccess$ after user data is loaded
           return new InitializeUser();
         })
         .catch(error => {
@@ -80,9 +80,25 @@ export class AuthEffects {
         .GoogleAuth()
         .then(() => {
           localStorage.setItem("user", "logged");
+          // Navigation is handled by InitializeUserSuccess$ after user data is loaded
           return new InitializeUser();
         })
         .catch(err => new GoogleAuthFailed({ error: err }));
+    })
+  );
+
+  // Navigate to /post/list only after user data is fully loaded from Firestore.
+  // This prevents the blank page caused by dispatching AllPosts before the
+  // Firebase auth token is attached to the Firestore client.
+  @Effect({ dispatch: false }) InitializeUserSuccess$ = this.actions$.pipe(
+    ofType<InitializeUserSuccess>(ActionTypes.InitializeUserSuccess),
+    filter(() => localStorage.getItem("user") !== null),
+    tap(() => {
+      // Only navigate if not already on a post/user page (avoids redirect loop on refresh)
+      const currentUrl = this.router.url;
+      if (currentUrl === '/' || currentUrl === '/home' || currentUrl.startsWith('/auth')) {
+        this.router.navigate(["post", "list"]);
+      }
     })
   );
 
